@@ -1,0 +1,21 @@
+{
+  "spellcheckDictionary": [
+    "hashmap",
+    "HashMap",
+    "ashMap ",
+    "lassnames ",
+    "classnames",
+    "ClassCastException",
+    "TreeMap",
+    "NPE",
+    "TREEFY",
+    "UNTREEFY",
+    "TREEFY",
+    "identityHashCodes",
+    "hashcodes",
+    "ZonedDateTime",
+    "ZoneId",
+    "ZoneOffset"
+  ],
+  "alwaysUpdateLinks": true
+}
