@@ -15,7 +15,25 @@
     "hashcodes",
     "ZonedDateTime",
     "ZoneId",
-    "ZoneOffset"
+    "ZoneOffset",
+    "ReentrantLock",
+    "ReadWriteLock",
+    "ReadLock",
+    "WriteLock",
+    "StampedLock",
+    "readLocks",
+    "readLock",
+    "writeLock",
+    "readlock",
+    "CountDownLatch",
+    "CyclicBarrier",
+    "classfile",
+    "ConstantDesc",
+    "SortedSet",
+    "TreeSet",
+    "Enum",
+    "enum",
+    "lang"
   ],
   "alwaysUpdateLinks": true
 }
