@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2e50324d2ca68066",
+        "id": "f0a2a6c56748e62b",
         "type": "tabs",
         "children": [
           {
-            "id": "e7c1c8ec6b9aa0fc",
+            "id": "5b0ca2f795399e9f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Core/Collections.md",
+                "file": "Java/JMM/COOPS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Core/Collections.md",
+                "file": "Java/JMM/COOPS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Core/Collections.md",
+                "file": "Java/JMM/COOPS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Core/Collections.md"
+                "file": "Java/JMM/COOPS.md"
               }
             }
           }
@@ -146,39 +146,51 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7c1c8ec6b9aa0fc",
+  "active": "5b0ca2f795399e9f",
   "lastOpenFiles": [
+    "Java/JMM/ClassLoaders.md",
+    "Java/JMM/Finalization & Reachability.md",
+    "Java/JMM/Java References.md",
+    "Java/JMM/Memory Leaks.md",
+    "Java/JMM/Java Native Memory Tracking.md",
+    "Java/JMM/Object Header.md",
+    "GO/Basics.md",
+    "GO",
+    "Java/JMM/COOPS.md",
+    "resources/jmm/object_header_32.png",
+    "resources/jmm",
+    "Java/Guts/Self-Referential Generic.md",
+    "Java/JMM",
+    "resources/jmm/object_header_64.png",
+    "resources/guts/unnamed (1).png",
+    "resources/guts/unnamed.png",
+    "resources/guts",
+    "resources/Новая папка",
+    "resources/unnamed (1).png",
+    "resources/unnamed.png",
+    "Java/Core/UUID.md",
+    "Java/Core/Functional Interfaces and Method References.md",
+    "Java/Core/For VS ForEach.md",
+    "Java/Core/Collections.md",
     "Java/Core/Map.md",
     "Java/Core/Synchronizers.md",
-    "Java/Core/UUID.md",
     "Java/Core/Thread States.md",
     "Java/Core/Locks.md",
     "Java/Core/TODO.md",
     "Java/Core/Enum.md",
     "Java/Core/Executors.md",
     "Java/Core/Java Time.md",
-    "Java/Core/Functional Interfaces and Method References.md",
-    "Java/Core/For VS ForEach.md",
     "Java/Guts/Constable.md",
     "Java/Guts/VarHandle.md",
-    "Java/Guts/Self-Referential Generic.md",
     "Java/Guts/MethodHandle.md",
     "resources/Collections.svg",
     "resources/languagetool.md",
-    "Java/Core/Collections.md",
     "serf-referential generic.md",
-    "MethodHandles.md",
-    "MethodHandles.Lookup.md",
-    "MethodHandlesLookup.md",
     "Java/Guts",
     "Programming.iml",
-    "2024-05-06.md",
     "Untitled.canvas",
     "resources/Collections.svg.xml",
-    "Welcome.md",
     "resources",
-    "create a link.md",
-    "Java/Core",
-    "Java"
+    "Java/Core"
   ]
 }
