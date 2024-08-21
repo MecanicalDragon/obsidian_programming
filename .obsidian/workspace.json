@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Core/Collections.md",
+                "file": "Java/Concurrent/Locks.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Core/Collections.md",
+                "file": "Java/Concurrent/Locks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Core/Collections.md",
+                "file": "Java/Concurrent/Locks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Core/Collections.md"
+                "file": "Java/Concurrent/Locks.md"
               }
             }
           }
@@ -148,11 +148,20 @@
   },
   "active": "46ad7353ffb6cbcb",
   "lastOpenFiles": [
-    "Java/Core/Functional Interfaces and Method References.md",
+    "Java/JMM/COOPS.md",
+    "Java/Concurrent/Locks.md",
+    "Java/Concurrent/Synchronizers.md",
+    "Java/Concurrent/Executors.md",
+    "Java/Concurrent",
+    "Java/Concurrent/Thread States.md",
+    "Java/Core/UUID.md",
     "Java/Core/For VS ForEach.md",
-    "Java/Core/Executors.md",
-    "Java/Core/Collections.md",
+    "Java/Core/Method Reference.md",
+    "Java/Core/Functional Interfaces.md",
+    "Java/Core/Map.md",
+    "Java/Core/Java Time.md",
     "Java/Core/Enum.md",
+    "Java/Core/Collections.md",
     "Java/Guts/Compilers.md",
     "Java/Guts/Lambda.md",
     "Java/Guts/MethodHandle.md",
@@ -163,14 +172,10 @@
     "Java/Guts/Self-Referential Generic.md",
     "Java/Guts/Constable.md",
     "Java/JMM/Object Header.md",
-    "Java/JMM/COOPS.md",
     "Java/JMM/Java Native Memory Tracking.md",
     "Java/JMM/ClassLoaders.md",
     "Java/JMM/Java References.md",
-    "Java/JMM/Memory Leaks.md",
     "resources/jmm/object_header_32.png",
-    "Java/JMM/Finalization & Reachability.md",
-    "GO/Basics.md",
     "GO",
     "resources/jmm",
     "Java/JMM",
@@ -181,16 +186,11 @@
     "resources/Новая папка",
     "resources/unnamed (1).png",
     "resources/unnamed.png",
-    "Java/Core/UUID.md",
-    "Java/Core/Map.md",
-    "Java/Core/Synchronizers.md",
-    "Java/Core/Thread States.md",
     "resources/Collections.svg",
     "Java/Guts",
     "Programming.iml",
     "Untitled.canvas",
     "resources/Collections.svg.xml",
-    "resources",
-    "Java/Core"
+    "resources"
   ]
 }
