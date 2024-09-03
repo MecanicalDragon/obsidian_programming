@@ -1,4 +1,5 @@
-In JVM every object consists of *object header* and *object fields*. Object header consists of *mark word* and *class word* - both are *machine words*. **Machine word** is a data fragment of fixed length that is handled by JVM as something united and undividable. Its length is equal to 32 or 64 bits depending on architecture. <u>Machine word’s tiering is forbidden in java</u>. Class word stores pointer on the class itself in the *compressed class space*; mark word’s content depends on the object's state. Arrays have additional 32 bits in the header to describe array’s length.<br>
+In JVM every object consists of *object header* and *object fields*. Object header consists of *mark word* and *class word* - both are usually [[Memory Layout|machine words]]. Arrays also have so-called *length word* that contains information about array length. Sometimes (in LP64 system when `UseCompressedOops` is turned on that is true by default) there could also be a 32-bit gap field that is often available to store instance fields.<br>
+Class word stores pointer on the class itself in the [[Java Native Memory Tracking#^7c8d1d|compressed class space]]; mark word’s content depends on the object's state. <br>
 **32-bit JVM header structure**
 ![](object_header_32.png)
 <br>**Object can be in 1 of 5 states:**

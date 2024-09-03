@@ -1,8 +1,8 @@
-Java process can consume memory for the following reasons:<br>
+Java process can consume memory for the following purposes:<br>
 - **Thread stacks** – 80-200 kb per thread, 150 kb average.
 - **Java Heap** – this is where most of the java objects live.
 - **Metaspace** – virtual space, divided into chunks. Every chunk belongs to the sole classloader, but single classloader can possess several chunks. When the classloader dies, it exempts its chunk. Metaspace has at least one subspace:
-	- **CompressedClassSpace** (3GB max usually, 1GB default) – class metadata (method bytecodes, symbols, constant pools, annotations) are stored here.  CompressesClassPointers – Java optimization that works like compressed oops; it makes class references 32-bit.
+	- **CompressedClassSpace** (3GB max usually, 1GB default) – class metadata (method bytecodes, symbols, constant pools, annotations) are stored here.  CompressesClassPointers – Java optimization that works like compressed oops; it makes class references 32-bit. ^7c8d1d
 - **GC memory** – additional memory for heap management (~+10% of heap):
 	- **Mark bitmap** - map of reachable objects
 	- **Mark stack** - the structure for traversing the reachable object graph during marking phase of GC
