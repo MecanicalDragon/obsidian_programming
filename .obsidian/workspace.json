@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e60dbad7fa491def",
+        "id": "7f256d4df1668b13",
         "type": "tabs",
         "children": [
           {
-            "id": "46ad7353ffb6cbcb",
+            "id": "8005b470b5539f21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/JMM/Object Headers.md",
+                "file": "System/Linux/shell.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "2d09c198826efb93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/JMM/COOPS.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 235
+    "width": 306
   },
   "right": {
     "id": "8e61c99f3e4669a0",
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/JMM/COOPS.md",
+                "file": "System/Linux/shell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/JMM/COOPS.md",
+                "file": "System/Linux/shell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/JMM/COOPS.md"
+                "file": "System/Linux/shell.md"
               }
             }
           }
@@ -159,51 +146,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2d09c198826efb93",
+  "active": "8005b470b5539f21",
   "lastOpenFiles": [
-    "Java/JMM/Memory Layout.md",
+    "System/Linux/SSH.md",
+    "System/Linux/shell.md",
+    "System/Linux/bashrc.md",
+    "System/Linux/CHMOD.md",
+    "System/Linux/misc.md",
     "Java/JMM/COOPS.md",
+    "Java/JMM/Memory Layout.md",
+    "System/Linux/filesystem.md",
     "Java/JMM/Object Headers.md",
+    "Java/JMM/Compilers.md",
+    "Java/JMM/ClassLoaders.md",
+    "Java/Libs/AOP.md",
+    "Java/Libs/Disruptor.md",
+    "Java/Libs/NIO.md",
+    "Java/Libs/Reactor.md",
+    "Java/Libs/Spring Framework.md",
+    "Java/JMM/Memory Leaks.md",
+    "resources/system/linux_directory_map.png",
+    "resources/system",
+    "resources/New folder",
+    "System/Linux/Vim.md",
+    "System/Windows/CMD.md",
+    "System/Windows/PowerShell.md",
+    "System/Untitled.md",
+    "System/Linux",
+    "Platform/HTTP.md",
+    "System/Windows",
+    "System",
+    "Java/Guts/Lambda.md",
+    "Kotlin/Kotlin Coroutines.md",
+    "Java/Libs",
+    "Kotlin",
+    "Platform/Spring.md~",
+    "Platform",
     "Java/JMM/Java Native Memory Tracking.md",
     "Java/JMM/Java References.md",
-    "Java/JMM/Memory Leaks.md",
-    "Java.md",
-    "machine words.md",
-    "Java/Core/Enum.md",
-    "Java/TODO/TODO.md",
     "Java/TODO",
-    "Java/JMM/Compilers.md",
-    "Java/Guts/Lambda.md",
-    "Java/Guts/Happens Before.md",
-    "Java/Guts/Kotlin Coroutines.md",
-    "Java/Guts/NIO.md",
-    "Java/Guts/Self-Referential Generic.md",
-    "Java/Guts/Unsafe.md",
-    "Java/JMM/ClassLoaders.md",
-    "Java/Concurrent/Thread States.md",
-    "Java/Guts/ByteBuffer.md",
-    "Java/Guts/MethodHandle.md",
-    "Java/Guts/VarHandle.md",
-    "Java/JMM/Finalization & Reachability.md",
-    "Java/Core/UUID.md",
-    "resources/languagetool.md",
     "resources/Collections.svg",
     "resources/jmm/object_header_64.png",
     "resources/jmm/object_header_32.png",
-    "Java/Core/Method Reference.md",
-    "Java/Concurrent",
-    "GO",
-    "resources/jmm",
-    "Java/JMM",
     "resources/guts/unnamed (1).png",
     "resources/guts/unnamed.png",
-    "resources/guts",
-    "resources/Новая папка",
     "resources/unnamed (1).png",
     "resources/unnamed.png",
-    "Java/Guts",
-    "Programming.iml",
-    "Untitled.canvas",
-    "resources/Collections.svg.xml"
+    "Untitled.canvas"
   ]
 }

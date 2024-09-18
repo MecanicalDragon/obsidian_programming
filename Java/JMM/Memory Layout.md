@@ -8,7 +8,7 @@ Even more, since modern CPUs actively use *cachelines* that are usually 64/128 <
 
 JVM is able to shuffle object fields order to compact them reducing necessary paddings and make data to take less space.
 
-Object padding is configurable using the `-XX:ObjectAlignmentInBytes` flag. The specified value must be a power of two and must be within the range of 8 and 256. So, if we specify object alignment as 16 bytes, we can use up to 64 GB of heap space with [[COOPS]]. ^2b0988
+Object padding is configurable using the `-XX:ObjectAlignmentInBytes` flag. The specified value must be a power of two and must be within the range of 8 and 256. So, if we specify object alignment as 16 bytes, we can use up to 64 GB of heap space with [[COOPS]]. ^padding
 
 Java Object Layout (JOL) - a tool that shows can show how Java aligns object field data in memory.
 `org.openjdk.jol:jol-core`.
