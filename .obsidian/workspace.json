@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Platform/Rabbit VS Kafka.md",
+                "file": "System/Linux/filesystem.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Platform/Rabbit VS Kafka.md",
+                "file": "System/Linux/filesystem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Platform/Rabbit VS Kafka.md",
+                "file": "System/Linux/filesystem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Platform/Rabbit VS Kafka.md"
+                "file": "System/Linux/filesystem.md"
               }
             }
           }
@@ -148,9 +148,22 @@
   },
   "active": "8005b470b5539f21",
   "lastOpenFiles": [
+    "Java/JMM/Object Headers.md",
+    "Java/JMM/Memory Layout.md",
+    "Java/JMM/Java Native Memory Tracking.md",
+    "Java/Core/Collections.md",
+    "Platform/Rabbit VS Kafka.md",
+    "_resources/jmm/object_header_64.png",
+    "_resources/jmm/object_header_32.png",
+    "_resources/system/linux_directory_map.png",
+    "_resources/jmm",
+    "_resources/system",
+    "_resources/languagetool.md",
+    "_resources/Collections.svg.xml",
+    "_resources/Collections.svg",
+    "_resources",
     "TODO/TODO.md~",
     "Platform/gRPC.md",
-    "Platform/Rabbit VS Kafka.md",
     "Platform/GraphQL.md",
     "Platform/REST.md",
     "Network/OSI Model.md",
@@ -174,24 +187,13 @@
     "System/Linux/filesystem.md",
     "System/Linux/CHMOD.md",
     "Java/JDK",
-    "System/Linux/Vim.md",
-    "System/Linux/SSH.md",
-    "System/Linux/bashrc.md",
-    "Java/JMM/COOPS.md",
     "resources/system/linux_directory_map.png",
     "resources/system",
-    "resources/New folder",
-    "System/Linux",
-    "System/Windows",
-    "System",
-    "Java/Libs",
     "resources/Collections.svg",
     "resources/jmm/object_header_64.png",
     "resources/jmm/object_header_32.png",
     "resources/guts/unnamed (1).png",
     "resources/guts/unnamed.png",
-    "resources/unnamed (1).png",
-    "resources/unnamed.png",
     "Untitled.canvas"
   ]
 }
