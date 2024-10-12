@@ -1,0 +1,2 @@
+**Netty** uses nio eventloops.
+On Windows Netty uses java implementation for nio and Netty threads have *nio* prefix in their names; on Linux Netty uses native platform implementation and its threads have *epoll* prefix in their names.

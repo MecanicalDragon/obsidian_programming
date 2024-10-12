@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System/Linux/shell.md",
+                "file": "Platform/Rabbit VS Kafka.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "System/Linux/shell.md",
+                "file": "Platform/Rabbit VS Kafka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "System/Linux/shell.md",
+                "file": "Platform/Rabbit VS Kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "System/Linux/shell.md"
+                "file": "Platform/Rabbit VS Kafka.md"
               }
             }
           }
@@ -148,43 +148,43 @@
   },
   "active": "8005b470b5539f21",
   "lastOpenFiles": [
-    "System/Linux/SSH.md",
-    "System/Linux/shell.md",
-    "System/Linux/bashrc.md",
-    "System/Linux/CHMOD.md",
-    "System/Linux/misc.md",
-    "Java/JMM/COOPS.md",
-    "Java/JMM/Memory Layout.md",
-    "System/Linux/filesystem.md",
-    "Java/JMM/Object Headers.md",
-    "Java/JMM/Compilers.md",
-    "Java/JMM/ClassLoaders.md",
-    "Java/Libs/AOP.md",
-    "Java/Libs/Disruptor.md",
+    "TODO/TODO.md~",
+    "Platform/gRPC.md",
+    "Platform/Rabbit VS Kafka.md",
+    "Platform/GraphQL.md",
+    "Platform/REST.md",
+    "Network/OSI Model.md",
+    "Network/MAC Address.md",
+    "Network/IP Address.md",
+    "System/Misc.md",
+    "TODO/TODO.md",
+    "TODO",
+    "Tech/Misc.md",
+    "Tech",
+    "Network",
+    "Platform/HTTP.md",
+    "Platform/Misc.md",
     "Java/Libs/NIO.md",
-    "Java/Libs/Reactor.md",
-    "Java/Libs/Spring Framework.md",
-    "Java/JMM/Memory Leaks.md",
+    "System/Linux/misc.md",
+    "System/Linux/shell.md",
+    "Java/JDK/Issues.md",
+    "Kotlin/Kotlin Coroutines.md",
+    "Java/TODO/TODO.md",
+    "Java/JDK/keytool.md",
+    "System/Linux/filesystem.md",
+    "System/Linux/CHMOD.md",
+    "Java/JDK",
+    "System/Linux/Vim.md",
+    "System/Linux/SSH.md",
+    "System/Linux/bashrc.md",
+    "Java/JMM/COOPS.md",
     "resources/system/linux_directory_map.png",
     "resources/system",
     "resources/New folder",
-    "System/Linux/Vim.md",
-    "System/Windows/CMD.md",
-    "System/Windows/PowerShell.md",
-    "System/Untitled.md",
     "System/Linux",
-    "Platform/HTTP.md",
     "System/Windows",
     "System",
-    "Java/Guts/Lambda.md",
-    "Kotlin/Kotlin Coroutines.md",
     "Java/Libs",
-    "Kotlin",
-    "Platform/Spring.md~",
-    "Platform",
-    "Java/JMM/Java Native Memory Tracking.md",
-    "Java/JMM/Java References.md",
-    "Java/TODO",
     "resources/Collections.svg",
     "resources/jmm/object_header_64.png",
     "resources/jmm/object_header_32.png",
