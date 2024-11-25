@@ -13,10 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System/Linux/filesystem.md",
+                "file": "Platform/HTTP Status Codes.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "HTTP Status Codes"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "System/Linux/filesystem.md",
+                "file": "Platform/HTTP Status Codes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +101,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for HTTP Status Codes"
             }
           },
           {
@@ -102,10 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "System/Linux/filesystem.md",
+                "file": "Platform/HTTP Status Codes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from HTTP Status Codes"
             }
           },
           {
@@ -116,7 +128,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "System/Linux/filesystem.md"
-              }
+                "file": "Platform/HTTP Status Codes.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of HTTP Status Codes"
             }
           }
         ]
@@ -148,11 +164,23 @@
   },
   "active": "8005b470b5539f21",
   "lastOpenFiles": [
+    "Databases/ACID.md",
+    "Databases/Postgres Anomaly Error Handling.md",
+    "Platform/HTTP Status Codes.md",
+    "Databases",
+    "Platform/HTTP Methods.md",
+    "Platform/REST.md",
+    "Platform/Rabbit VS Kafka.md",
+    "Platform/Misc.md",
+    "Platform/gRPC.md",
+    "Platform/GraphQL.md",
+    "_resources/platform/http_methods.png",
+    "System/Linux/filesystem.md",
+    "_resources/platform",
     "Java/JMM/Object Headers.md",
     "Java/JMM/Memory Layout.md",
     "Java/JMM/Java Native Memory Tracking.md",
     "Java/Core/Collections.md",
-    "Platform/Rabbit VS Kafka.md",
     "_resources/jmm/object_header_64.png",
     "_resources/jmm/object_header_32.png",
     "_resources/system/linux_directory_map.png",
@@ -163,9 +191,6 @@
     "_resources/Collections.svg",
     "_resources",
     "TODO/TODO.md~",
-    "Platform/gRPC.md",
-    "Platform/GraphQL.md",
-    "Platform/REST.md",
     "Network/OSI Model.md",
     "Network/MAC Address.md",
     "Network/IP Address.md",
@@ -175,25 +200,16 @@
     "Tech/Misc.md",
     "Tech",
     "Network",
-    "Platform/HTTP.md",
-    "Platform/Misc.md",
     "Java/Libs/NIO.md",
     "System/Linux/misc.md",
     "System/Linux/shell.md",
     "Java/JDK/Issues.md",
     "Kotlin/Kotlin Coroutines.md",
-    "Java/TODO/TODO.md",
-    "Java/JDK/keytool.md",
-    "System/Linux/filesystem.md",
-    "System/Linux/CHMOD.md",
-    "Java/JDK",
     "resources/system/linux_directory_map.png",
-    "resources/system",
     "resources/Collections.svg",
     "resources/jmm/object_header_64.png",
     "resources/jmm/object_header_32.png",
     "resources/guts/unnamed (1).png",
-    "resources/guts/unnamed.png",
     "Untitled.canvas"
   ]
 }
