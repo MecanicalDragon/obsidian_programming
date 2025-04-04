@@ -6,9 +6,9 @@ Postgres handles some anomalies throwing errors. This behavior must be foreseen 
 
 [Postgres Anomalies](https://mkdev.me/posts/transaction-isolation-levels-with-postgresql-as-an-example)
 
-**SELECT FOR UPDATE** acquires exclusive lock over the rows. Supposed that this type of lock prevents even reading from another transactions, but in Postgres it allows other transactions to read these rows with just `SELECT`; it prevents only `SELECT FOR UPDATE`.
+**SELECT FOR UPDATE** acquires [[JPA Locks#^dbexclusivelock|exclusive lock]] over the rows. Supposed that this type of lock prevents even reading from other transactions, but in Postgres it allows other transactions to read these rows with just `SELECT`; it prevents only `SELECT FOR UPDATE`.
 
-**SELECT FOR SHARE** acquires shared lock over the rows and allows other transactions read but not update these rows.
+**SELECT FOR SHARE** acquires [[JPA Locks#^dbsharedlock|shared lock]] over the rows and allows other transactions read but not update these rows.
 
 `WARNING`: in Postgres (and OracleDB at least) exists one mismatch between JPA contract and its database implementation: JPA's `LockMode.PESSIMISTIC_WRITE` lock just adds `FOR UPDATE` to all not-native queries. But Postgres’s `FOR UPDATE` doesn’t prevent simple `SELECT` from other transactions – just `UPDATE` and `SELECT FOR UPDATE` only.
 

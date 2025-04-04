@@ -42,7 +42,7 @@ Oracle DB doesn’t support Serializable level at all because of its low perform
 ### Lost Updates
 
 **Lost Update** can be of 2 different types:
-- easy one is when the data that has been updated by T1 is overwritten by T2 before T1 is either committed or rolled back. This one is not allowed under all isolation levels and can be avoided using atomic updates (`set x = x+1`).
+- easy one is when the data had been updated by T1 and then overwritten by T2 before T1 is either committed or rolled back. This one is not allowed under all isolation levels and can be avoided using atomic updates (`set x = x+1`).
 - hard one that is a special case of the write skew. It happens when T1 reads data into a local memory and then updates it after it was modified by T2. This one is not allowed under Repeatable Read and above and can be avoided using explicit locks (`select for update`).
 
 Both these types can be avoided in databases automatically under proper isolation levels.
