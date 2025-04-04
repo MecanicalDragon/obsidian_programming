@@ -1,0 +1,1 @@
+Docker uses `iptables` for request routing. One of its features - it controls routing within the whole docker internal network, so if you do port-forwarding in `container-1`, all containers that request forwarded port of `container-1` over the `iptables` will get to the forwarding target.

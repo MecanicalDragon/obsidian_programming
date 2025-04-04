@@ -7,6 +7,7 @@
 `pwd` - print current directory path
 `ls` - show files and dirs in current directory
 `ls -l` - show files and dirs in current directory with info
+`ls -lh <file>` - show file with info and human-readable file size
 `ls -a` - show all files including invisible files
 ## Files
 `mkdir` - create directory
