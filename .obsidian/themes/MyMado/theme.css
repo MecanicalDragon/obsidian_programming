@@ -1,0 +1,158 @@
+
+body{
+	--accent-h: 210;
+	--accent-s: 93%;
+	--accent-l: 62%;
+	
+	--bgcolor-h:204;
+	--bgcolor-s:45%;
+	--bgcolor-l:97%;
+	
+	--titlebar-background:var(--background-secondary);
+	--titlebar-background-focused:var(--background-secondary);
+	
+	--background-modifier-hover:var(--color-base-hover);
+	
+	--bold-weight:var(--font-bold);
+	--italic-color:var(--text-muted);
+	--code-normal:var(--text-muted);
+	--blockquote-color:var(--color-muted);
+	
+	--background-primary:var(--color-base-00);
+	--background-secondary:var(--color-base-20);
+	--checklist-done-color:var(--color-base-50);
+	
+	--icon-m:20px;
+	--icon-l:20px;	
+	--divider-width:4px;
+	--callout-padding:0px;
+	--callout-title-padding:11px;
+	--callout-content-padding:0 11px 0 27px;
+	
+	--embed-padding:13px 23px;
+	--list-indent:37px;
+	
+	--header-height:43px;
+	--tab-stacked-header-width:53px;
+	--vault-name-font-size:14px;
+	
+	
+	/* custom */
+	--border:1px solid var(--tab-outline-color);
+	--button-radius:4px;
+	--panel-radius:8px;
+	--window-radius:23px;
+	--button-padding-icon:7px;
+	--button-padding-long:11px 15px;
+	
+	--background-fourth:var(--color-base-00-0);
+	--background-fifth:var(--color-base-20-0);
+	--panel-shadow:0 1px 3px var(--color-base-shadow);
+	--panel-shadow-hover:0 3px 5px var(--color-base-shadow-hover);
+	--window-shadow:0 0 9px var(--color-base-shadow-hover);
+	--window-shadow-left:-4px 0 5px var(--color-base-shadow-hover);
+	--window-shadow-right:4px 0 5px var(--color-base-shadow-hover);
+	
+	--sidebar-size-left:270px;
+	--sidebar-size-right:270px;
+	
+	
+	--color-strikethrough:var(--text-faint);
+	--italic-color:var(--color-italic);
+	--inline-code-color:var(--color-red);
+	
+	--hovering-trigger-size:1px;
+
+}
+body.is-translucent{
+	--background-primary:var(--color-base-00-trans);
+	--background-secondary:var(--color-base-20-trans);
+	--background-fourth:var(--color-base-00-0-trans);
+}
+body:is(:not(.css-settings-manager),.toggle-easy-toggle){
+	--hovering-trigger-size:13px;
+}
+
+.theme-light,
+.is-mobile.theme-light,
+.is-tablet.theme-light{
+	--color-base-00:hsla(calc(var(--bgcolor-h) - 0), calc(var(--bgcolor-s) - 0%), calc(var(--bgcolor-l) - 0%), 1);
+	--color-base-10:hsla(calc(var(--bgcolor-h) + 6), calc(var(--bgcolor-s) - 8%), calc(var(--bgcolor-l) - 1%), 1);
+	
+	--color-base-05:hsla(calc(var(--bgcolor-h) + 3), calc(var(--bgcolor-s) - 28%), calc(var(--bgcolor-l) - 5%), 1);
+	--color-base-20:hsla(calc(var(--bgcolor-h) + 6), calc(var(--bgcolor-s) - 0%), calc(var(--bgcolor-l) - 0%), 1);
+	
+	--color-base-00-trans:hsla(calc(var(--bgcolor-h) - 0), calc(var(--bgcolor-s) - 0%), calc(var(--bgcolor-l) - 0%), 0.5); /*for transparency background*/
+	--color-base-00-trans-alt:hsla(calc(var(--bgcolor-h) - 0), calc(var(--bgcolor-s) - 35%), calc(var(--bgcolor-l) - 7%), 0.8); /* alt for transparency background sidebar (hidden, sliding mode) */
+	--color-base-20-trans:hsla(calc(var(--bgcolor-h) + 6), calc(var(--bgcolor-s) - 8%), calc(var(--bgcolor-l) - 1%), 0.5);
+	--color-base-00-0:hsla(calc(var(--bgcolor-h) - 0), calc(var(--bgcolor-s) - 12%), calc(var(--bgcolor-l) + 4%), 1); /* very white */
+	--color-base-20-0:hsla(calc(var(--bgcolor-h) + 0), calc(var(--bgcolor-s) - 35%), calc(var(--bgcolor-l) - 5%), 0.1); /* hovered version for above */
+	--color-base-00-0-trans:hsla(calc(var(--bgcolor-h) - 0), calc(var(--bgcolor-s) - 12%), calc(var(--bgcolor-l) + 4%), 0.5);
+	--color-base-shadow:hsla(212, 17%, 80%, 0.2); /* shadow */
+	--color-base-shadow-hover:hsla(212, 17%, 80%, 0.3); /* shadow hover*/
+	--color-base-hover:var(--color-base-shadow-hover); /* hover*/
+	
+	--color-base-35:hsla(210, 15%, 73%, 1);
+	--color-base-50:hsla(217, 15%, 73%, 1);
+	--color-base-70:hsla(218, 19%, 39%, 1);	
+	--color-base-100:hsla(0, 0%, 13%, 1); /* text-normal color */
+  
+	--color-accent-1: hsl(calc(var(--accent-h) - 0), calc(var(--accent-s) - 0%), calc(var(--accent-l) + 10%));
+	--color-accent-2: hsl(calc(var(--accent-h) - 0), calc(var(--accent-s) - 0%), calc(var(--accent-l) - 5%));
+
+	--color-red:hsla(365, 85%, 55%, 1);
+	--color-muted:var(--color-base-70);
+	--color-italic:hsla(230, 85%, 65%, 1);
+	
+	--color-highlight:var(--text-normal); /* for highlight text color */
+}
+/* Inline code */
+.markdown-rendered :not(pre)>code,
+.cm-s-obsidian span.cm-inline-code{
+    color:var(--inline-code-color);
+}
+/* inline code background */
+.cm-hmd-indented-code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code{
+    background:var(--code-background);
+}
+.markdown-rendered pre{
+    overflow-x: auto;
+}
+
+/* Folder styling, just for file-explorer */
+.nav-folder-title{
+    color:var(--color-accent-2);
+    font-size:0.95em;
+    font-weight:500;
+}
+
+/* Markdown Headings */
+body:is(:not(.css-settings-manager),.toggle-h1-margin-top) :is(h1, .markdown-rendered h1){
+    margin-left:10px;
+}
+body:is(:not(.css-settings-manager),.toggle-h1-margin-top) :is(h2, .markdown-rendered h2){
+    margin-left:20px;
+}
+body:is(:not(.css-settings-manager),.toggle-h1-margin-top) :is(h3, .markdown-rendered h3){
+    margin-left:35px;
+}
+/*:is(h1,h2,h3,h4,h5,h6), .markdown-rendered :is(h1,h2,h3,h4,h5,h6){*/
+/*    margin-left:33px;*/
+/*}*/
+/*.markdown-embed .markdown-preview-pusher+div>h1,*/
+/*.markdown-preview-section div.is-collapsed+div>h1{*/
+/*    margin-left:33px;*/
+/*}*/
+
+/* Tables */
+.markdown-rendered thead tr > th,
+.markdown-rendered thead tr > th:nth-child(2n+2) {
+    background-color: var(--color-base-35);
+}
+.markdown-rendered thead tr > th {
+    border-color: var(--color-base-70);
+}
+.markdown-rendered tbody tr > td {
+    border-color: var(--color-base-35);
+}

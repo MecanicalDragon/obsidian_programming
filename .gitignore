@@ -1,6 +1,7 @@
-!.obsidian/themes/MyMado
 .idea
+.obsidian/themes/**
+!.obsidian/themes/MyMado
+!.obsidian/themes/MyMado/**
 .obsidian/plugins
-.obsidian/themes
 .obsidian/workspace.json
 Programming.iml
