@@ -17,6 +17,7 @@
 `mv` - move file
 `rm -f` - remove file
 `rmdir` - remove directory
+`which <file>` - location of executable `<file>`
 `vim` - modify file content with Vim
 
 `find <path> -name <pattern>` - search files in *path* containing *pattern* in the name
@@ -48,6 +49,14 @@
 `tr <SET1> <SET2>` - replace characters from *SET1* to characters from *SET2*
 `tr -d <SET>` - delete characters from the *SET*
 `|` - pipelining. Apply output of one command as input of another: `ps aux | grep 8080`
+## Syntax
+`${}` - variable usage: `echo "Hello, ${name}!"`
+`${#var}` - length of the string
+`${var:-default}` - var or default value if empty
+`${var:offset:length}` - substring
+`$()` - result of the command execution: `file_count=$(ls | wc -l)`
+`cmd1 && cmd2` - run cmd2 if cmd1 succeeds
+`cmd1 || cmd2` - run cmd2 if cmd1 fails
 
 ## Service
 `man <CMD>` - command manual. (`shift+g` – to the end, `q` - quit)
