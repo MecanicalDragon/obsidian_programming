@@ -1,0 +1,1 @@
+**Number Used Once** - unique random value used once to avoid duplications or fake requests. It is often used in cryptography to protect from _replay attack_. For example, Digest Authentication hashes nonce with payload data to avoid attacker authorization in case of request interception.
