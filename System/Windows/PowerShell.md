@@ -11,7 +11,7 @@ PowerShell profiles reside in
 ```PowerShell
 # Run git bash
 Function RunGitBash {
-    start "C:\Progs\Git\bin\sh.exe" --login
+    start "C:\Progs\Git\bin\sh.exe" --login
 }
 Set-Alias -Name gsh -Value RunGitBash
 ```
