@@ -49,6 +49,8 @@
 `tr <SET1> <SET2>` - replace characters from *SET1* to characters from *SET2*
 `tr -d <SET>` - delete characters from the *SET*
 `|` - pipelining. Apply output of one command as input of another: `ps aux | grep 8080`
+## Network
+`ss -a` - show network connections (hosts+ports)
 ## Syntax
 `${}` - variable usage: `echo "Hello, ${name}!"`
 `${#var}` - length of the string
