@@ -21,5 +21,5 @@ Instead of running a **nested** Docker daemon, you can use the **host's Docker d
 - **Less overhead** (no need for a separate Docker daemon).
 - **Faster builds** (since it reuses the host’s Docker cache).
 
-🔹 **Cons:**
+**Cons:**
 - **Less isolation** (Docker commands affect the host system).
