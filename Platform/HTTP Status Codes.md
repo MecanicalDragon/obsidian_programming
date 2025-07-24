@@ -74,7 +74,11 @@
 
 **414 URI Too Long** – provided URI is too long for the server to process.
 
-**415 Unsupported Media Type** – request entity has a media type which the server or resource does not support.
+**415 Unsupported Media Type** – request's *Content-Type* is not supported.
+
+**418 I'm a teapot**
+
+**421 Misdirected Request** – the request was directed to a server that is not able to produce a response.
 
 **428 Precondition Required** – server requires the request to be conditional. Intended to prevent the 'lost update' problem. Typically, *If-Match* is missing.
 
@@ -85,12 +89,12 @@
 ## 5xx
 **500 Internal Server Error** – generic error message given when an unexpected condition was encountered and no other specific messages are suitable.
 
-**501 Not Implemented** – server either does not recognize the request method or it lacks the ability to fulfill the request.
+**501 Not Implemented** – server either does not recognize the request method or does not support the functionality required to fulfill the request.
 
-**502 Bad Gateway** – server acted as a gateway or proxy and received an invalid response from the upstream server.
+**502 Bad Gateway** – server is a gateway or proxy and received an *invalid* response from the upstream server.
 
 **503 Service Unavailable** – temporary server cannot handle the request.
 
-**504 Gateway Timeout** – server is a gateway or proxy and did not receive a timely response from the upstream server.
+**504 Gateway Timeout** – server is a gateway or proxy and did not receive a *timely* response from the upstream server.
 
 **505 HTTP Version Not Supported** –  server does not support HTTP protocol version used in the request.
