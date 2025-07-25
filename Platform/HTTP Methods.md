@@ -1,5 +1,9 @@
 ![](http_methods.png)
-["fresh enough"](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+["fresh enough"](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html) is a term implying a set of caching policies in HTTP. These policies include requests with the following headers usage:
+- Cache-Control: max-age, immutable, no-cache, must-revalidate, etc.
+- Expires
+- ETag + If-Match / If-None-Match
+- Last-Modified + If-Modified-Since / If-Unmodified-Since
 
 ## How to make POST and PATCH requests idempotent
 

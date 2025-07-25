@@ -1,0 +1,5 @@
+TCP Handshake happens after [[DNS lookup]] and before [[TLS handshake]], and takes approximately *50 ms*. Connection can be terminated independently by each side of the connection. 
+
+TCP (Transmission Control Protocol) uses a three-way handshake to establish a reliable connection. The connection is full duplex, and both sides synchronize (SYN) and acknowledge (ACK) each other. The exchange of these four flags is performed in three steps: SYN, SYN-ACK, and ACK.
+
+The client chooses an initial sequence number, set in the first SYN packet, and sends it to the server. The server, after it receives a SYN message, also chooses its own initial sequence number, set in the SYN/ACK packet, and sends it back to the client. During the final step the client acknowledges the server's response and sends its own ACK back. After that they start the actual data transfer. This mechanism allows client and server to acknowledge each other's sequence numbers. Incrementing these numbers on both sides and comparing it with received package numbers allows to detect missing or out-of-order segments.
