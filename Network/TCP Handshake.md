@@ -1,4 +1,4 @@
-TCP Handshake happens after [[DNS lookup]] and before [[TLS handshake]], and takes approximately *50 ms*. Connection can be terminated independently by each side of the connection. 
+TCP Handshake happens after [[DNS lookup]] and before [[TLS]], and takes approximately *50 ms*. Connection can be terminated independently by each side of the connection.
 
 TCP (Transmission Control Protocol) uses a three-way handshake to establish a reliable connection. The connection is full duplex, and both sides synchronize (SYN) and acknowledge (ACK) each other. The exchange of these four flags is performed in three steps: SYN, SYN-ACK, and ACK.
 
