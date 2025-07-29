@@ -1,5 +1,4 @@
 shared and exclusive locks in postgres
-транзисторы и логические операторы
 
 CICD - ключи с асинхронными сборками против родитель-наследник и поступенчатой сборки
 CICD agent and CICD worker

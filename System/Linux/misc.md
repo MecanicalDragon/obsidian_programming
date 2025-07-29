@@ -7,3 +7,5 @@
 `nohup java -jar vocabot.jar > output.log 2>&1 &` - run application in background
 
 `/etc/sudoers` file allows you to specify which users can run which commands with `sudo` ^sudousers
+
+`kill -9 <pid>` (**SIGKILL**) can be interpreted as the OS forcibly kills a process on the kernel level, while `kill -15 <pid>` (**SIGTERM**) can be interpreted as sending a command to the application to shut down actively, that allows JVM to apply registered hooks before termination.
