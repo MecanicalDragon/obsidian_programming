@@ -33,7 +33,7 @@
 
 **303 See Other** – precepts to browse to URI from *Location* header, that should be provided, with *GET* method. This response code is often sent back as a result of PUT or POST methods so the client may retrieve a confirmation, or view a representation of a real-world object.
 
-**304 Not Modified** – says that resource has not been modified since time, specified in request’s *If-Modified-Since* or *If-None-Match* headers, therefore there is no necessity to respond with it once more, and client can use previously received data.
+**304 Not Modified** – says that resource has not been modified since time, specified in request’s *If-Modified-Since* header, therefore there is no necessity to respond with it once more, and client can use previously received data. Also, used with the *If-None-Match* header.
 
 **305 Use Proxy** – `Deprecated` – precepts to use for request proxy, specified in the *Location* header.
 

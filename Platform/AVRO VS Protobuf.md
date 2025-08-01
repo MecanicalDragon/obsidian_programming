@@ -6,6 +6,6 @@ AVRO and PB are both binary object serialization languages (OSL) that allow to s
 | Schema can be embedded in the data or fetched separately from SchemaRegistry    | Schema is required beforehand both on the dispatcher and receiver sides                                |
 | Schema evolution is very agile                                                  | Schema evolution is less agile but still good                                                          |
 | No need in generated code. Data can be (de)serialized with libraries in runtime | Controllers and dtos must be generated beforehand with `protoc` but no libraries are needed in runtime |
-| Best with Kafka and SchemaRegistry (Confluent)                                  | Best with gRPC                                                                                         |
+| Best with Kafka and SchemaRegistry                                              | Best with gRPC                                                                                         |
 |                                                                                 | 10-30% faster                                                                                          |
 
