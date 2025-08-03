@@ -1,3 +1,8 @@
+Про Кассандру и колоночные базы:
+https://www.bigdataschool.ru/wiki/cassandra
+Про редис:
+[Redis Topologies: Replicated setup, Sentinel, Cluster, Standalone + Envoy](https://blog.devgenius.io/redis-topologies-d9e16a7fa8e0)
+
 shared and exclusive locks in postgres
 
 CICD - ключи с асинхронными сборками против родитель-наследник и поступенчатой сборки

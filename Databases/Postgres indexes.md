@@ -1,0 +1,17 @@
+**B-tree** indexes - the most universal and commonly used, effective to index any comparable data.
+
+**Hash** indexes - pretty useless: they can’t be ordered, can’t be compared with null. Work pretty like a plain HashMap: index structure is divided into buckets that store 4-byte hashes of indexed data against pointers to a table row. Hashes are ordered, so search through a bucket is fast. But due to hash collisions the database must verify if indexed data really satisfies a condition in an indexed table.
+
+**GiST** - generalized search tree. It is a balanced *R-tree*, whose every inner node has a predicate with references to other nodes, and leaves contain references to entries. This structure affords to index texts, images, and geodata. It is good to index points in a space, ranges of anything like datetimes. For text indexing the *RD-tree* (Russian Doll) is used. The idea behind RD-trees is to use a signature tree instead of a rectangle tree. Every indexed word is represented as a bitwise signature of determined length where all bits are zeros except the one. So, the signature of the document is a ‘bitwise or’ for all distinct word signatures. This approach is not precise because signatures of different words can be equal.
+
+**SP-GiST** - space partitioning generalized search tree. It is useful for structures that consist of recursive not intersect sets (*quadtrees*, *k-d trees*, *trie*). This is the idea behind this type of index. Resulting tree is not balanced, unlike GiST or B-Tree index. Each inner node has a prefix or predicate that is true for all children nodes. Leaf nodes contain links to table entries.
+
+**GIN** - Generalized Inverted Index works with data types whose values are not atomic but consist of elements. It indexes not values itself but distinct elements, and each element refers to values where it is met. It is much like an alphabetical index in the book. Elements are stored as a B-Tree. Index is useful for text search, value in an array or in the JSON data.
+
+**RUM** - improved GIN. Unlike GIN, the index keeps information about the position of indexed word(s) and allows to sort result data by relevance.
+
+**BRIN** - Block Range Index that doesn’t point to requested information, but points to information that is surely irrelevant to prevent a search through it. It is useful during searches in big amounts of data (Terabytes). The table ranges to zones. If during a search the searched value is not contained in a zone, the whole zone is skipped. Since this type of index has small size and low overhead, it may be useful to create it just because it theoretically may be helpful if the indexed data is physically approximately ordered in the database (dates of creation, for example).
+
+**Bloom** - it is a classic [[DB Structures#Bloom Filter|Bloom filter]] - data structure that affords to check if an element belongs to a set. Index contains a bit array filled with zeros initially (a signature). Several hash functions map an indexed element to some bits of a signature. Hence, if all corresponding bits of a signature are 1, the element may be in a set. If at least one is 0 - it surely is absent. This index is a BRIN alternative. Though BRIN is more compact, it also has constraints of physical data location. Like Hash Indices, Bloom indices can compare data only for equality; though Hash indices are more precise, they also take more space and can index only a single field.
+
+[Postgres Indexes](https://habr.com/ru/company/postgrespro/blog/326096/)
