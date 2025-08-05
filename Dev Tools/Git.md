@@ -33,10 +33,11 @@
 `git push origin +<branch-name> –force` - override remote commits with local
 `git reset --hard origin/<branch-name>` - override local commits with remote
 `git update-index --chmod=+x <file-path>` - update file permissions.
+`git rm --cached <path-to-the-file>` - remove the file from tracking.
 
 **Git-indexes are saved during environments (different machines)**
 ### If git commands work very long:
-- First of all, try to execute following command in any repository: `GIT_CURL_VERBOSE=1 GIT_TRACE=1 git fetch`
+- First of all, try to execute the following command in any repository: `GIT_CURL_VERBOSE=1 GIT_TRACE=1 git fetch`
 - If it hangs you need to update file `c:\windows\system32\drivers\etc\hosts`
 - Add actual IP address vs server hostname: `12.23.34.45 git-server.com`
 
