@@ -1,4 +1,4 @@
-Debezium is a kind of plugin for kafka-connect that enables Change Data Capture (CDC) from [[MySQL]] database. The changes are streamed to [[Kafka]] for downstream EPA processing.   
+Debezium is a kind of plugin for kafka-connect that enables Change Data Capture (CDC) from MySQL database. The changes are streamed to [[Kafka]] for downstream EPA processing.   
   
 Kafka Connect - a framework for building and running distributed data pipelines that reads or writes data from/to the external system. There are 2 types of connectors:  
 - **source** - reads data from the database  
@@ -6,8 +6,8 @@ Kafka Connect - a framework for building and running distributed data pipelines 
 
 ### Config properties for performance optimization
 
-`poll.interval.ms: 100` - interval of polling binlog changes from [[MySQL]]  
-`max.batch.size: 16384` - max size of the [[MySQL]] binlog changes batch   
+`poll.interval.ms: 100` - interval of polling binlog changes from [[MySQL Binlog]]
+`max.batch.size: 16384` - max size of the [[MySQL Binlog]] changes batch   
 `max.queue.size: 65536` - size of the queue of updates waiting for processing in Kafka-connect  
 `producer.override.compression.type: lz4` - compression of Kafka messages  
 `producer.override.linger.ms: 100` - time waited to collect kafka messages before pushing them all to Kafka in a batch  
