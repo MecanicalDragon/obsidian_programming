@@ -1,0 +1,3 @@
+**Gradle *implementation*** provides access to dependency to explicitly specified dependency-holder only, but not to its transitive holders. It is not exposed to *classpath* or consumers of dependency-holder, so, if any change is performed in a dependent module, gradle will recompile only it and modules that depend on it directly, but not other modules that depend on it implicitly.
+
+**Gradle *api*** (compile in the past) provides access to all transitive holders, exposing dependency at *classpath*, hence it requires recompilation of all modules in the dependency tree in case of change, because they all can access it over intermediate dependency.

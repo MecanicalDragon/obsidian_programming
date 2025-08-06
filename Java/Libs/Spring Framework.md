@@ -63,3 +63,20 @@ Since version 2 SpringBoot uses CGLIB to create proxies, that’s why we can ope
 `@ControllerAdvice(annotations = “CustomAnnotation”)` placed over that class implementing `ResponseBodyAdvice` and overriding `beforeBodyWrite` allows to modify ResponseBody for all classes annotated with `@CustomAnnotation`.
 
 Spring's `spring.lifecycle.timeout-per-shutdown-phase` property determines the timeout for the shutdown of any phase (group of *SmartLifecycle* beans with the same *phase* value), but not the whole shutdown period. The default phase value is 0, webserver beans have 2 phases: `int max` and `int max - 1`. Phase can be determined with interface *Phased*. All singletons are considered as LifeCycle beans; SmartLifeCycle beans implement interface *Phased*. Beans are destroyed in reverse order of their phases and in reverse dependency order (dependents first). Non-obvious dependencies can be specified with `@DependsOn` annotation.
+
+## Misc
+
+**GrantedAuthority** is an individual privilege: READ_AUTHORITY, WRITE_PRIVILEGE, EXECUTE_AS_ROOT. The name is arbitrary.
+
+**Role** is a coarse-grained GrantedAuthority, represented as a String and prefixed with `ROLE_ `. 
+
+Spring doesn’t make any significant difference between them, but we can consider roles as containers for authorities. This is a higher-level approach to roles – making them a more business-facing concept rather than an implementation-centric one.
+
+---
+
+**Filters** are part of the webserver and not the Spring framework, they act before any servlet.
+
+**HandlerInterceptors** are part of the Spring MVC framework and act between the *DispatcherServlet* and Controllers.
+
+---
+

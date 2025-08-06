@@ -1,0 +1,1 @@
+**Dangling pointers** (or wild pointers) in JMM are pointers that do not point to a valid object of the appropriate type. These are special cases of memory safety violations. Dangling references and wild references do not resolve to a valid destination.
