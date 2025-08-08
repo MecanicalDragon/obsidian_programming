@@ -3,7 +3,9 @@
 **Redo log** - журнал восстановления InnoDB, аналог WAL в Postgres. Отвечает за восстановление бд после краша. В нем хранятся физические изменения страниц данных,
 информация, необходимая для "переигрывания" завершённых транзакций после сбоя. При старте MySQL, если был крэш, — InnoDB "переигрывает" транзакции из redo log.
 
-**Binlog** - источник правды для репликации и логгирования всех изменений, *Point-in-time recovery*. Мастерский бинлог читают реплики для соблюдения консистентности. Хранит данные в более высокоуровневом формате: стэйтменты, например.
+**Binlog** - источник правды для репликации и логгирования всех изменений, *Point-in-time recovery*. Мастерский бинлог читают реплики для соблюдения консистентности. Хранит данные в более высокоуровневом формате: стэйтменты, например. Специальный поток *Binlog Dump Thread* ожидает запросов от реплик и отдает бинлог им.
+
+**Relay log** - реплика запускает IO-поток, который читает binlog с мастера и сохраняет его в локальный аналог binlog на реплике. Затем SQL-поток читает relay log и повторяет операции локально на реплике, соблюдая порядок и транзакционные границы.
 
 ### Binlog main properties
 
@@ -22,11 +24,12 @@
 **Statement-Based Logging**
 **Плюсы:**
 - Меньше объём binlog - экономия диска и пропускной способности.
-- Меньше нагрузка на запись binlog? так как просто записывается строка запроса.
+- Меньше нагрузка на запись binlog, так как просто записывается строка запроса.
 - Быстрее при простых запросах, особенно `INSERT` и `UPDATE` по индексу.
 **Минусы:**
 - Возможны проблемы с детерминированностью (например, `NOW()`, `RAND()`, `UUID()`, `LIMIT`, `ORDER BY` без `WHERE` и т.д.).
 - Репликация может привести к расхождениям, если состояние данных на мастере и слейве хоть немного различается.
+- В целом, считается менее надежным, чем `ROW` и постепенно убирается из поддержки: `ROW` сделан дефолтным с версии MySQL 5.7.7; в Avrora `STATEMENT` планируется к депрекэйту.
 
 Производительность обычно выше, особенно при большом количестве простых запросов.
 
@@ -53,3 +56,11 @@
 	- **RBL**: write or ignore statements for the database defined by these properties, independently from what is the default database (the one selected by `USE`).
 
 https://dev.mysql.com/doc/refman/8.4/en/replication-options-binary-log.html
+
+### Replication and Triggers
+
+With statement-based replication, triggers executed on the master also execute on the slave. With row-based replication, triggers executed on the master do not execute on the slave. Instead, the row changes on the master resulting from trigger execution are replicated and applied on the slave. This behavior is by design.
+
+If you want triggers to execute on both the master and the slave, you must use SBL. However, to enable slave-side triggers, it is not necessary to use SBL exclusively. It is sufficient to switch to SBL only for those statements where you want this effect, and to use RBL the rest of the time. You can do it on the session level with the following commands:
+- `SET SESSION binlog_format = 'ROW';`
+- `SET SESSION binlog_format = 'STATEMENT';`

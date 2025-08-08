@@ -1,9 +1,16 @@
 Ассемблер с чатом жпт:
 https://chatgpt.com/share/6893e114-0c58-8001-a389-1d412d10e203
 
+---
 False Sharing:
 https://alidg.me/blog/2020/4/24/thread-local-random#false-sharing
+@Contended MESI
 
+`x & mask` эквивалентно `x % m` **только если `m = 2^k` и `mask = m - 1`**.  
+Если `m` — не степень двойки, то `& mask` ≠ `% m`
+`private static final long mask = (1L << 48) - 1; // то есть m = 2^48`
+
+---
 Про Кассандру и колоночные базы:
 https://www.bigdataschool.ru/wiki/cassandra
 Про редис:
