@@ -1,0 +1,9 @@
+Anonymous classes are not really anonymous, because the compiler generates a class name like `OuterClass$1` for them, that makes them genuine and usable Java classes. Although the class name is not available to Java source code, the class can be found using that name and accessed reflectively and then used just like any other class.
+
+***Hidden class*** is something different. It also has a name that is available by directly invoking `getName()` on its `Class` object. This name can also show up in several other places including diagnostic, JVM tool interface, or JFR events. However, hidden classes cannot be found using a class loader or in any way that regular classes can be found, such as by using reflection. The reason is that hidden classes are named in a way that explicitly puts them in a different namespace than regular classes.
+
+In the current version of the implementation of hidden classes the naming scheme exploits the fact that in the JVM, class names typically have two forms. There’s the binary name (`com.acme.Gadget`), which is returned by calling `getName()` on a `Class` object. And there’s the internal form (`com/acme/Gadget`). Hidden classes aren’t named using that same pattern. Instead, a name such as `com.acme.Gadget/1234` would be returned by calling `getName()` on the `Class` object of a hidden class. This is neither a binary name nor an internal form, and any attempt to make a regular class that matches this name will fail.
+
+One advantage of this naming scheme (and differentiating hidden classes in this way) is that they need not be subject to the usual vigorous scrutiny of the JVM’s class loading mechanism. This fits with the overall design that hidden classes are intended for use by framework authors and others who need capabilities that go beyond the usual bulletproof checks imposed on general Java classes.
+
+[JEP 371](https://openjdk.org/jeps/371)

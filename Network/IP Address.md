@@ -3,7 +3,7 @@
 If the last octet == 0 - this IP address is a network IP. 
 If the last octet == 255 - this IP address is a broadcast IP, DHCP-server may query the network by this IP for participants that has no ip-address or that has a certain ip-address. 
 
-**DHCP** stands for *Dynamic Host Configuration Protocol*. DHCP-server allows network devices to obtain IP addresses and other parameters that are required for work in TCP/IP networks.
+**DHCP** stands for *Dynamic Host Configuration Protocol*. DHCP-server is a "network manager"; it is installed in every router or can be a standalone server. DHCP-server allows network devices to obtain IP addresses and other parameters that are required for work in TCP/IP networks.
 
 In the previous [IPv4](https://en.wikipedia.org/wiki/IPv4) [classful network](https://en.wikipedia.org/wiki/Classful_network) architecture, the top three bits of the 32-bit IP address defined how many bits were in the network prefix:
 - Class A: 8 Network prefix bits and 24 host id bits
