@@ -1,7 +1,9 @@
 `192.168.17.10` – ip-address. Each IP address consists of a network-identifying prefix followed by a host identifier. IP address consists of 4 octets.
 
 If the last octet == 0 - this IP address is a network IP. 
-If the last octet == 255 - this IP address is a broadcast IP, DHCP-server may query the network by this IP for participants that has no ip-address or that has a certain ip-address. 
+If the last octet == 255 - this IP address is a *broadcast IP*, meaning the packet will be sent to all participants of the network.
+
+DHCP-server may query the network by this IP for participants that has no ip-address or that has a certain ip-address. 
 
 **DHCP** stands for *Dynamic Host Configuration Protocol*. DHCP-server is a "network manager"; it is installed in every router or can be a standalone server. DHCP-server allows network devices to obtain IP addresses and other parameters that are required for work in TCP/IP networks.
 

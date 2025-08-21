@@ -6,7 +6,7 @@
 - `1` — [[ICMP & IGMP#^ICMP|ICMP]]
 - `2` — [[ICMP & IGMP#^IGMP|IGMP]]
 - `4` — [[IPv4]] (*IP-in-IP*, используется для [[Tunneling|туннелирования]] частных сетей через публичные, сейчас фактически вытеснен [[GRE]], [[L2TP]] + IPsec)
-- `6` — [[TCP & UDP#^TCP|TCP]]
+- `6` — [[TCP]]
 - `17` — [[TCP & UDP#^UDP|UDP]]
 - `41` — [[IPv6]] (*IPv6-in-IPv4*, [[Tunneling|туннелирование]] IPv6 внутри IPv4)
 - `47` — [[GRE]]
