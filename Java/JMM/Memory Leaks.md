@@ -1,4 +1,5 @@
-**Memory Leak** is a situation when objects are not needed anymore but are still referred to, and GC cannot remove them. Memory Leak reasons:<br>
+**Memory Leak** is a situation when objects are not needed anymore but are still referred to, and GC cannot remove them. Memory Leak reasons:
+
 - static fields live unless classloader of the class becomes eligible for GC
 - not closed resources consume memory
 - improper *equals()* and *hashCode()* methods in HashMap

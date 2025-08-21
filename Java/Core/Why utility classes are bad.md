@@ -1,11 +1,11 @@
-First of all, they are not explicitly bad, but we must pay attention to create and use it.
+*First of all, they are not explicitly bad, but we must pay attention to create and use it.*
 
 Utility class is a support class that defines a set of methods that perform common, frequently reused functions.
 - Utility class should not contain business logic, because for business logic we’ve got beans.
 - Utility class is a support class, and it must contain support methods.
 - Utility class must contain methods related to some idea.
 
-Disadvantages:
+**Disadvantages:**
 - It is not OOP-related, it is procedure-related.
 - It doesn’t provide abstraction to communicate, that is one of basic OOP principles.
 - Utility classes provoke ugly code because you can stash everything there and do not care about design.

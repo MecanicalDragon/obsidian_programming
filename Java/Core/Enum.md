@@ -1,4 +1,5 @@
-Enum inside JVM compiles into a simple final class that extends parent class **Enum** that is declared as `EnumᐸE extends EnumᐸEᐳᐳ`, which is [[Self-Referential Generic]], and implements 3 interfaces: Comparable, Serializable, [[Constable]]. Enum has the following features:<br>
+Enum inside JVM compiles into a simple final class that extends parent class **Enum** that is declared as `EnumᐸE extends EnumᐸEᐳᐳ`, which is [[Self-Referential Generic]], and implements 3 interfaces: Comparable, Serializable, [[Constable]]. Enum has the following features:
+
 1. Enum constructor is always private. You cannot make it public or protected.
 2. An enum is implicitly final, which means you cannot extend it.
 3. You cannot inherit an enum from another enum or class because an enum implicitly extends **java.lang.Enum**. But an enum can implement interfaces.

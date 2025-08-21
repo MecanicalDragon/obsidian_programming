@@ -1,4 +1,5 @@
-Self-referential generic (or **self-bound type,** or **recursive generic**) is a generic construction that looks like `EnumᐸE extends EnumᐸEᐳᐳ`. Yes, it is used in [[Enum]]; but which problems does it solve?<br>
+Self-referential generic (or **self-bound type,** or **recursive generic**) is a generic construction that looks like `EnumᐸE extends EnumᐸEᐳᐳ`. Yes, it is used in [[Enum]]; but which problems does it solve?
+
 First, it allows to use methods and interfaces of the parent in its children and distinguish types, avoiding runtime exceptions during interactions with them. 
 ```java
 public abstract class MyEnum implements Comparable<MyEnum>{}
@@ -19,7 +20,8 @@ class Animal extends Enum<Animal>{}
 class Converter extends Enum<Converter> {}
 public int compareTo(Animal o){}
 ```
-With this approach `animal.compareTo(converter)` will just not compile.<br>
+With this approach `animal.compareTo(converter)` will just not compile.
+
 Second, it allows not to loose type data while using parent methods in children.
 ```java
 class Delivery {
@@ -40,7 +42,8 @@ Delivery cancelled = fast.cancelled();
 
 long courierId = fast.getCourierId();
 ```
- Last code line won't compile. We need to know exact type and use direct casting to get courierId.<br>
+ Last code line won't compile. We need to know exact type and use direct casting to get courierId.
+
  ```java
  public class DeliveryᐸT extends DeliveryᐸTᐳᐳ {
 	protected T create(long id, boolean isActive) {

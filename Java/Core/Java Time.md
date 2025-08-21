@@ -12,7 +12,9 @@
 **PERIOD** is a date-based amount of time in the **ISO-8601** calendar system, such as *2 years, 3 months and 4 days*.
 >This class models a quantity or amount of time in terms of years, months and days. The supported units of a period are YEARS, MONTHS and DAYS. All three fields are always present but may be set to zero.
 
-<br>Durations and periods differ in their treatment of daylight savings time when added to ZonedDateTime. A Duration will add an exact number of seconds, thus a duration of one day is always exactly 24 hours. By contrast, a Period will add a conceptual day, trying to maintain the local time.<br>
+
+Durations and periods differ in their treatment of daylight savings time when added to ZonedDateTime. A Duration will add an exact number of seconds, thus a duration of one day is always exactly 24 hours. By contrast, a Period will add a conceptual day, trying to maintain the local time.
+
 For example, consider adding a period of one day and a duration of one day to 18:00 in the evening before a daylight savings gap. The Period will add the conceptual day and result in a ZonedDateTime at 18:00 the following day. By contrast, the Duration will add exactly 24 hours, resulting in a ZonedDateTime at 19:00 the following day (assuming a one-hour DST gap).
 
 | Duration                                 | Period                                         |

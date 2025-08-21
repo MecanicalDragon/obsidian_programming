@@ -1,6 +1,7 @@
 ## Spring Context Initialization
 
-**I. Configuration parsing and BeanDefinition creation.**<br>
+**I. Configuration parsing and BeanDefinition creation.**
+
 Spring has 3 types of context:
 1. *ClassPathXmlApplicationContext* (context.xml).
    1. *XmlBeanDefinitionReader* reads input stream from the xml file and creates BDs.
@@ -14,22 +15,27 @@ Spring has 3 types of context:
 
 *BeanDefinition* is an interface that contains metadata of future beans. All BDs after the parsing are collected in a special map.
 
-**II. BeanFactoryPostProcessors creation and tuning.**<br>
+**II. BeanFactoryPostProcessors creation and tuning.**
+
 BFPPs are another special type of beans, they’re created on this step before all other beans creation. BFPPs tune BDs before bean creation, so on this step we can adjust data for bean creation, even replace bean class for future bean. *PropertySourcesPlaceholderConfigurer* injects property values into beans during this step.
 
-**III. Custom FactoryBeans creation.**<br>
+**III. Custom FactoryBeans creation.**
+
 *FactoryBean* is an interface that is useful for XML configuration; it can modify beans during creation. It is useless for annotation-based and java config. Btw, XML-based configuration has an advantage over JavaConfig: it can be updated with just a substitution of the XML config file, without recompilation of the code.
 
-**IV. Bean creation.**<br>
+**IV. Bean creation.**
+
 *BeanFactory* creates beans using BDs. It also creates *BeanPostProcessors* which are another special type of beans.
 
-**V. BeanPostProcessor tuning.**<br>
+**V. BeanPostProcessor tuning.**
+
 BPPs tune created beans in 3 steps:
 1. *beforeInit* method is used to modify the bean itself.
 2. bean initialization. `@PostConstuct` methods are invoked.
 3. *afterInit* method is used to modify the bean’s behavior. All proxies are created during this step.
 
-**Context is ready.**<br>
+**Context is ready.**
+
 After all the steps above passed, the *ContextRefreshed* event is emitted, and the application is ready to work. Context-related application events are: started, stopped, refreshed, and closed.
 ## Spring Bean Scopes
 
@@ -66,9 +72,9 @@ Spring's `spring.lifecycle.timeout-per-shutdown-phase` property determines the t
 
 ## Misc
 
-**GrantedAuthority** is an individual privilege: READ_AUTHORITY, WRITE_PRIVILEGE, EXECUTE_AS_ROOT. The name is arbitrary.
+**GrantedAuthority** is an individual privilege: `READ_AUTHORITY`, `WRITE_PRIVILEGE`, `EXECUTE_AS_ROOT`. The name is arbitrary.
 
-**Role** is a coarse-grained GrantedAuthority, represented as a String and prefixed with `ROLE_ `. 
+**Role** is a coarse-grained *GrantedAuthority*, represented as a String and prefixed with `ROLE_ `. 
 
 Spring doesn’t make any significant difference between them, but we can consider roles as containers for authorities. This is a higher-level approach to roles – making them a more business-facing concept rather than an implementation-centric one.
 
