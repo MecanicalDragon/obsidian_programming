@@ -64,7 +64,7 @@
 `man <CMD>` - command manual. (`shift+g` – to the end, `q` - quit)
 `ps aux` - show running processes
 `gsettings list-keys org.gnome.desktop.wm.keybindings` - list shortcuts (*switch-to-workspace-left* is the first to remap)
-`nohup`- [[System/Linux/misc#^nohup|run application in background]]
+`nohup`- [[OS/Linux/misc#^nohup|run application in background]]
 `chmod` - [[CHMOD|access rights]]
 `systemctl` - manage system files and daemons (`start`, `stop`, `enable` (make active), `daemon-reload` (reload configuration), `restart`, `status`)
 
@@ -74,7 +74,7 @@
 `source /etc/environment` - apply env vars to the session
 `source ~/.profile`, `source ~/.bashrc` - apply configuration to the session.
 `sudo` - execute a command with *root* rights. Requires your own password
-`sudo -u <USER>` - execute a command with *USER* rights. [[System/Linux/misc#^sudousers|sudousers]]. Requires your own password.
+`sudo -u <USER>` - execute a command with *USER* rights. [[OS/Linux/misc#^sudousers|sudousers]]. Requires your own password.
 `exit` - exit the current shell session
 
 `kill -9 <PID>` - **SIGKILL** - kill the process immediately on a kernel level
