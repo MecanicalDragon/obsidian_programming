@@ -8,7 +8,7 @@
 
 **SingleThreadScheduledExecutor** – the same as above but optimized for a single thread usage.
 
-**WorkStealingPool** – thread pool that uses a work-stealing algorithm to balance the load among threads. Uses **ForkJoinPool**'s internal queue (a ForkJoinTask array-based Deque). Default parallelism level is processor cores amount.
+**WorkStealingPool** – thread pool that uses a work-stealing algorithm to balance the load among threads. Uses **ForkJoinPool**'s internal queue (a ForkJoinTask array-based Deque). Default parallelism level is processor cores amount. ^fjp
 
 **UnconfigurableExecutorService** – wrapper, that forbids reconfiguration.
 
