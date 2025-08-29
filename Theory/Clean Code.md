@@ -3,7 +3,7 @@ Clean code is code that is easy to read, change, reuse, and test.
 
 **Coupling**. High coupling means that your module knows way too much about the inner workings of other modules. Modules that know too much about other modules make changes hard to coordinate and make modules brittle. If Module A knows too much about Module B, changes to the internals of Module B may break functionality in Module A. Modules should be as independent as possible from other modules, so that changes to a module don’t heavily impact other modules. Class A is coupled with class B if it has fields of B, invokes B methods, has local B variables, extends B.
 
-**Cohesion**. It shows how dense code elements that do one job reside to each other. Low cohesion classes have a lot of methods that do not invoke each other. Low cohesion would mean that the code that makes up some functionality is spread out all over your codebase. Not only is it hard to discover what code is related to your module, it is difficult to jump between different modules and keep track of all the code in your head. Perfect cohesion entity – lambda.
+**Cohesion**. It shows how dense code elements that do one job reside to each other. Low cohesion classes have a lot of methods that do not invoke each other. Low cohesion would mean that the code that makes up some functionality is spread out all over your codebase. It’s not only hard to discover what code is related to your module, it is difficult to jump between different modules and keep track of all the code in your head. Perfect cohesion entity – lambda.
 
 **Complexity**. It is determined by the number of interacting entities, number of operations in a method, inheritance depth, depth of method hierarchy, if-else branching and number of possible states.
 
