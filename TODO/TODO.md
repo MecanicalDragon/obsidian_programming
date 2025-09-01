@@ -6,7 +6,6 @@ gap and gap-lock
 
 Фулскан против индексскан
 
-Недостатки OFFSET
 
 ---
 
@@ -22,13 +21,6 @@ Database structures:
 
 ### Java
 
-False Sharing:
-https://alidg.me/blog/2020/4/24/thread-local-random#false-sharing
-@Contended MESI
-
-`x & mask` эквивалентно `x % m` **только если `m = 2^k` и `mask = m - 1`**.  
-Если `m` — не степень двойки, то `& mask` ≠ `% m`
-`private static final long mask = (1L << 48) - 1; // то есть m = 2^48`
 
 ### Other Important
 
