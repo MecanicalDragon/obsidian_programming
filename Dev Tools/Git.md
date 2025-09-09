@@ -14,6 +14,7 @@
 `git checkout main~5` - move HEAD 5 commits backward from main last commit.
 `git checkout HEAD~3^2~` - move HEAD 3 commits back, then to 2 parent and 1 commit back again.
 `git reset HEAD~2` - remove 2 last commits in local repo
+`git reset --soft HEAD~2` - remove 2 last commits in local repo, stage changes
 `git revert cx` - do commit with reflected changes of commit cx
 `git rebase -i HEAD~4 | git rebase -i <tagretBranch>` - interactive rebase; apply commits to HEAD, but first allow to squash them, reorder or skip - and apply after that.
 `git tag t1 c1` - add tag t1 to commit c1 (you can checkout to tag after that)
@@ -34,8 +35,15 @@
 `git reset --hard origin/<branch-name>` - override local commits with remote
 `git update-index --chmod=+x <file-path>` - update file permissions.
 `git rm --cached <path-to-the-file>` - remove the file from tracking.
+`git add -u` - add updated already tracked files to index.
+`git add -A` - add all, even not tracked yet, files to index.
 
 **Git-indexes are saved during environments (different machines)**
+### Git hooks
+
+Git hooks dwell in `.git/hooks` - they are simple sh scripts without any extension. `pre-commit` is executed every time before every commit. You can use this to apply auto-formatting, for example. Hook scripts must be [[CHMOD|executable]] like any other scripts:
+`chmod +x .git/hooks/pre-commit`
+
 ### If git commands work very long:
 - First of all, try to execute the following command in any repository: `GIT_CURL_VERBOSE=1 GIT_TRACE=1 git fetch`
 - If it hangs you need to update file `c:\windows\system32\drivers\etc\hosts`

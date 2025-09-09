@@ -49,6 +49,28 @@
 `tr <SET1> <SET2>` - replace characters from *SET1* to characters from *SET2*
 `tr -d <SET>` - delete characters from the *SET*
 `|` - pipelining. Apply output of one command as input of another: `ps aux | grep 8080`
+
+## Std Redirects
+- **stdin** = _standard input_; file descriptor `0`; the stream a program reads input from (by default the keyboard).
+- **stdout** = _standard output_; file descriptor `1`; the stream a program writes its normal output to (by default the terminal).
+- **stderr** = _standard error_; file descriptor `2`; the stream a program writes error messages to (also by default the terminal, but separate from stdout).
+Those 3 above are called file descriptors because in Unix everything is a file. On the process start OS opens those 3 streams above. You can see open descriptors for a terminal session with the following command: `ls -l /proc/$$/fd` (`$$` - current shell)
+
+`"text" > FILE` - **stdout** redirect; replace file content with "text"
+`"text" >> FILE` - **stdout** redirect; append "text" to the file
+`2>`, `2>>` - **stderr** redirect; similar to the above, but for errors output
+`&>` - join **stdout** and **stderr** for *bash*/*zsh*
+`> file 2>&1` - similar to the above but *POSIX-compatible* (unified for all Unix-based systems)
+`<` - **stdin** redirect; accept arguments from file (`sort < FILE`, `cat < FILE`)
+`<<WORD` - **heredoc**; accept arguments from the virtual file typed right in the console:
+`cat <<EOF > FILE ... EOF` - everything between opening and closing *EOF* (`...`) goes into *FILE*. This text may be multiline without any screening symbols; this can be even shell script. *EOF* stands for *End Of File* - just abbreviation; any other word can be instead of *EOF*.
+- `cat <<'EOF' > FILE ... EOF` - insert text as plain text
+- `cat <<EOF > FILE ... EOF` - insert text replacing variables (`$HOME` -> `/Users/user`)
+`<<<` - single string *stdin*: `>wc -c <<< "hello"`
+
+`n > file` — redirect the stream with the number `n` (not only `1` or `2`).
+`n>&m` — copy descriptor `m` into `n` (`2>&1`)
+ `> /dev/null 2>&1` — blackhole
 ## Network
 `ss -a` - show network connections (hosts+ports)
 ## Syntax

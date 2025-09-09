@@ -2,21 +2,23 @@ Modern CPUs are able to reorder instructions if they don’t depend on each othe
 
 **Synchronization**
 - In the synchronized block monitor acquiring HB all following instructions for the thread.
-	- Also, there exists a guarantee that all variables visible to a thread will be refreshed from the main memory.
-- Monitor releasing on the synchronized block leaving  HA all previous instructions in the thread.
-	- Also, there exists a guarantee that all variables visible to a thread will be flushed to the main memory.
-		- Hence, the JVM optimizer can bring instructions into the sync block but not vice versa.
-- Monitor releasing HB all other threads monitor acquiring.
+	- Also, there is a guarantee that all variables visible to a thread will be refreshed from the main memory.
+- Monitor release after the synchronized block execution HA all previous instructions in the thread.
+	- Also, there is a guarantee that all variables visible to a thread will be flushed to the main memory.
+
+> *That means JVM optimizer can bring instructions into the sync block but not out of it.*
+- Monitor release HB monitor acquiring by any other thread.
 
 **Read/Write**
 - Variable write and sequential variable read in the same thread always respect the HB contract.
-- Volatile writes HA all previous instructions in the same thread. (1).
-	- Also, there exists a guarantee that all variables visible to a thread will be flushed to the main memory (2).
+- Volatile writes HA all previous instructions in the same thread (1).
+	- Also, there is a guarantee that all variables visible to a thread will be flushed to the main memory (2).
 - Volatile read HB all following instructions in the same thread (1).
-	- Also, there exists a guarantee that all variables visible to a thread will be refreshed from the main memory (2).
-		- That means everything before volatile HB everything after.
+	- Also, there is a guarantee that all variables visible to a thread will be refreshed from the main memory (2).
+
+> *That means everything before volatile operation HB everything after.*
 - Volatile long and double variables obtain atomic read and write properties. Non-volatile longs and doubles are not atomic on 32-bit systems (3).
-- BTW, for reference types volatile guarantees apply only to reference updates but not referenced object inner fields.
+- For reference types volatile guarantees apply only to reference updates but not referenced object inner fields.
 
 **Threads**
 - Thread start HB all the code in the thread.
