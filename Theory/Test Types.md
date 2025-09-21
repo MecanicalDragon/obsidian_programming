@@ -13,6 +13,7 @@
 - **Smoke testing** – minimal testing of application for obvious bugs presence. Usually performed by a programmer. If an application doesn’t pass smoke tests it doesn’t make sense to push it forward to more thorough testing.
 - **Monkey testing** – technique where the user tests the application by providing random inputs and checking the behavior, or seeing whether the application or system will crash. Monkey testing is usually implemented as random, automated unit tests.
 - **Basis path testing** - testing strategy, that implies to test each linearly independent path through the program; in this case, the number of test cases will be equal to the [[Code Complexity|cyclomatic complexity]] of the program ([[Design Predicates]]). ^bpt
+- **A/B Testing** (split testing or bucket testing) is a method of market investigation that implies that different test groups will be treated with different versions of a product to collect statistics and determine which version is better for business.
 
 **Performance testing types:**
 - **Load Testing** – test under expected load, demonstrates that the system really works and is able to scale.
