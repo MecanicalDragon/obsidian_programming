@@ -1,0 +1,3 @@
+**Encoding** is a data transformation so that it can be properly (and safely) consumed by a different type of system, (e.g. binary data being sent over email). The goal is not to keep information secret, but rather to ensure that it’s able to be properly consumed. *Encoding* transforms data into another format using a scheme that is publicly available so that it can easily be reversed. It does not require a key as the only thing required to decode it is the algorithm that was used to encode it.
+
+**Examples**: ASCII, Unicode, URL Encoding, Base64
