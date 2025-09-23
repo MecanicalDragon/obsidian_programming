@@ -7,8 +7,8 @@ VarHandle methods allow access to variables under specific memory ordering effec
 - *Volatile* operations are fully ordered with respect to each other.
 
 Generally, all the methods of the VarHandle class fall to five different access modes.
-1. *Read Access* - allow getting the value of the variable under specified memory ordering effects. There are several methods with this access mode like: `get()`, `getAcquire()`, `getVolatile()` and `getOpaque()`.
-2. *Write Access* - allow us to set the value of the variable under specific memory ordering effects. Similarly, to methods with read access, we have several methods with write access: `set()`, `setOpaque()`, `setVolatile()`, and `setRelease()`.
+1. *Read Access* - allows getting the value of the variable under specified memory ordering effects. There are several methods with this access mode like: `get()`, `getAcquire()`, `getVolatile()` and `getOpaque()`.
+2. *Write Access* - allows setting the value of the variable under specific memory ordering effects. Similarly, to methods with read access, we have several methods with write access: `set()`, `setOpaque()`, `setVolatile()`, and `setRelease()`.
 3. *Atomic Update Access* – `compareAndSet()` and others.
 4. *Numeric Atomic Update Access* – `getAndAdd()` and others.
 5. *Bitwise Atomic Update Access* – methods with this access allow us to atomically perform bitwise operations under specific memory ordering effects: `getAndBitwiseOr()` method, for example.
