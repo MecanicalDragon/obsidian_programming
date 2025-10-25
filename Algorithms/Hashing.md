@@ -4,6 +4,6 @@
 - It should not be possible to go from the output to the input.
 - Any modification of a given input should result in drastic change to the hash.
 
-*Hashing* is used in conjunction with [[Algorithms/Misc#^a1|authentication]] to produce strong evidence that a given message has not been modified. This is accomplished by taking a given input, hashing it, and then signing the hash with the sender’s private key.
+*Hashing* is used in conjunction with [[Theory/Misc#^a1|authentication]] to produce strong evidence that a given message has not been modified. This is accomplished by taking a given input, hashing it, and then signing the hash with the sender’s private key.
 
 **Examples**: SHA-3, MD5

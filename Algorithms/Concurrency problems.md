@@ -1,0 +1,7 @@
+**DeadLock** is a situation when 2 or more threads are waiting for each other and the waiting never ends. This can happen if T1 holds a resource that is needed for T2 and requires a resource holded by T2. There are 2 possible solutions to avoid this situation:
+- acquire resources in the strict predefined order, release it in the reverse order. But this could be very inefficient.
+- provide a resource dealer that will track resource availability and permit resource acquisition by threads. But this could be very complex.
+
+**LiveLock** is a situation when 2 or more threads continuously repeat the same actions in attempts to do some job but every time fail and do not progress at all. This can happen if 2 or more threads to avoid DeadLocks first check resource availability and being confirmed that resources exist try to acquire it, but in the process of acquiring realize that resources have ended because of too many concurrent consumers; all threads release it, check for availability again, and the cycle continues. To solve this issue, priority of resource acquisition could be assigned to every thread, but it can lead to another problem…
+
+**Starvation** is a situation when 2 or more threads compete for a resource, but some of them receive significantly less of it than others. A possible solution is called *Aging*, that means increasing the priority of the thread every time it needs to yield.

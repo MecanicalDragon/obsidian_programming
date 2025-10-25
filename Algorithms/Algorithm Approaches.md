@@ -1,0 +1,37 @@
+- **Brute force**. Usually it is a simple plain and silly iteration and comparison without any art. Avoid it completely.
+- **HashMap usage**. Simply: go through an array, store elements to a map and try to find a better solution.
+- **Sliding window**. This algorithm is based on a [[Misc#^rka|Rabin-Karp algorithm]] and uses a window that moves through an array and checks the current spotlight for a solution. It is good because it ensures `O(n)` runtime complexity. Typical tasks:
+	- Find a max sum of x adjacent integers in an array.
+	- Longest substring of x distinct characters.
+	- Anagram search within a string.
+- **Two pointers** approach assumes iterating the array from both ends simultaneously until the required condition is met and usually suits well for sorted arrays. Typical tasks:
+	- Find two integers giving a certain sum in a Sorted Array.
+	- Squaring of a sorted array.
+	- Triplets that sum to zero.
+	- Most Water Container.
+	- Comparing strings that contain backspaces.
+- **Fast and Slow Pointers**. This approach is pretty specific and suits well for one-directional Linked Lists. It may be useful in tasks:
+	- Finding the midpoint of a linked list.
+	- Detecting a cycle in a linked list.
+	- Finding the n-th element from the end of a linked list. In this task pointers have equal speed, but the slow one starts when the fast one reaches the n-th element from the start.
+	- Palindrome check (Find a midpoint, then go to both ends from it and compare).
+- **Divide and Conquer** is an approach that suggests breaking the problem down into smaller subproblems, solving them starting from the smallest and merging results. Examples of this approach are binary search or merge sort.
+- **Dynamic programming** is an extended Divide and Conquer approach. It implies storing solutions to subproblems in a cache that is passed downstream recursively to avoid redundant calculations.
+- **Counting sort** usage suits to sort data of some enclosed non-extensive range like letters or limited numbers like ages or temperature. It is also can be used to find anagrams.
+- **Bitwise mask** suits to find something unique like a letter or digit in an array with duplicates. Bitwise `XOR` is used to filter paired values, and in the end we receive a bitwise mask of that unique something.
+	- Also, it can be useful to find a duplicate in a sequence.
+	- Furthermore, it can be used to determine anagrams.
+- **Backtracking** is an algorithmic technique for solving problems recursively by trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time. This is better than the naive approach (generating all possible combinations of digits and then trying every combination one by one) as it drops a set of permutations whenever it backtracks. Usually, there are 3 types of [backtracking](https://www.geeksforgeeks.org/backtracking-algorithms/) tasks:
+	- Decision Problem – In this, we search for a feasible solution.
+	- Optimization Problem – In this, we search for the best solution.
+	- Enumeration Problem – In this, we find all feasible solutions.
+- **[[Misc#^greedy|Greedy algorithms]]** choose the best option at each step, without considering the overall solution. They can be fast and efficient, but may not always lead to the optimal solution. One of the examples is a least coins task. A greedy algorithm succeeds in most cases, but there still exist conditions where it fails, like coins of 1, 7 and 10, and you have to pay 15.
+- **Two Heaps**. Used to find a median value of integer stream.
+- **Binary search** and **Modified Binary Search**
+- **Merge Intervals**
+- **Cyclic sort**
+- **Tree BFS and DFS** (Breadth First Search and Depth First Search)
+- **Subsets**
+- **Top k elements**
+- **K-Way Merge**
+- **[[Misc#^topsort|Topological Sort]]**
