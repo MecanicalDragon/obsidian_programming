@@ -1,0 +1,8 @@
+In the context of the network security, scrubber (also known as a network packet scrubber or a network traffic scrubber) is a type of network security device that is used to filter and sanitize incoming network traffic, particularly to protect against distributed denial-of-service (DDoS) attacks.
+
+A network scrubber typically operates at the network layer of the [[OSI model]] and sits between the internet and the target network or server. As traffic passes through the scrubber, it examines each packet in real-time, using a combination of signature-based and behavior-based analysis techniques to identify and block malicious traffic, while allowing legitimate traffic to pass through. Some of the techniques used by network scrubbers to identify and filter malicious traffic include:
+
+- **Protocol analysis**: Scrubbers can analyze the protocol used in the network traffic, such as HTTP, HTTPS, DNS, or SMTP, to detect and block traffic that deviates from the expected protocol behavior or patterns.
+- **Traffic filtering**: Scrubbers can filter traffic based on specific criteria, such as IP address, port number, packet size, or rate of transmission, to block traffic that matches known attack patterns or is suspicious in nature.
+- **Anomaly detection**: Scrubbers can use machine learning algorithms to detect abnormal traffic patterns or behaviors that may indicate a DDoS attack, such as a sudden surge in traffic from a single source.
+- **Packet inspection**: Scrubbers can inspect the contents of network packets to detect and block packets containing known malware or attack payloads, such as SQL injections or buffer overflows.

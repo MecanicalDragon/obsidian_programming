@@ -10,7 +10,7 @@ Contrary to SQL databases, [[NoSQL databases]] were designed with scale in mind.
 
 When a query comes in, an initial coordinator node within the cluster is picked to process the request via the chosen algorithm. Such algorithms include round-robin, or shortest distance to the node). If the coordinator node does not own the data, it forwards the request to another node who has the data or knows another node who has it.
 
-Similarly, when a write request goes to a coordinator node, it uses [[consistent hashing]] to determine which node should the data be stored in. The whole idea of sharing information through the nodes is often referred to as the *gossip protocol*, where information is transferred from node to node like an epidemic.
+Similarly, when a write request goes to a coordinator node, it uses [[Consistent Hashing and HRW#Consistent Hashing|consistent hashing]] to determine which node should the data be stored in. The whole idea of sharing information through the nodes is often referred to as the *gossip protocol*, where information is transferred from node to node like an epidemic.
 
 Consistency is achieved by replicating the data from node to node. That happens asynchronously and takes time. Therefore, instead of waiting for the response from all nodes, coordinator node commits write when it receives a specific number of acknowledgements from other nodes. This approach is called *quorum writes*.
 

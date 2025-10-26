@@ -3,6 +3,8 @@
 
 Фулскан против индексскан
 
+Zookeeper is useful for distributed configuration delivery and cluster synchronization.
+
 
 ---
 

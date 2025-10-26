@@ -1,6 +1,6 @@
 - **Brute force**. Usually it is a simple plain and silly iteration and comparison without any art. Avoid it completely.
 - **HashMap usage**. Simply: go through an array, store elements to a map and try to find a better solution.
-- **Sliding window**. This algorithm is based on a [[Misc#^rka|Rabin-Karp algorithm]] and uses a window that moves through an array and checks the current spotlight for a solution. It is good because it ensures `O(n)` runtime complexity. Typical tasks:
+- **Sliding window**. This algorithm is based on a [[Algorithms/Misc#^rka|Rabin-Karp algorithm]] and uses a window that moves through an array and checks the current spotlight for a solution. It is good because it ensures `O(n)` runtime complexity. Typical tasks:
 	- Find a max sum of x adjacent integers in an array.
 	- Longest substring of x distinct characters.
 	- Anagram search within a string.
@@ -25,7 +25,7 @@
 	- Decision Problem – In this, we search for a feasible solution.
 	- Optimization Problem – In this, we search for the best solution.
 	- Enumeration Problem – In this, we find all feasible solutions.
-- **[[Misc#^greedy|Greedy algorithms]]** choose the best option at each step, without considering the overall solution. They can be fast and efficient, but may not always lead to the optimal solution. One of the examples is a least coins task. A greedy algorithm succeeds in most cases, but there still exist conditions where it fails, like coins of 1, 7 and 10, and you have to pay 15.
+- **[[Algorithms/Misc#^greedy|Greedy algorithms]]** choose the best option at each step, without considering the overall solution. They can be fast and efficient, but may not always lead to the optimal solution. One of the examples is a least coins task. A greedy algorithm succeeds in most cases, but there still exist conditions where it fails, like coins of 1, 7 and 10, and you have to pay 15.
 - **Two Heaps**. Used to find a median value of integer stream.
 - **Binary search** and **Modified Binary Search**
 - **Merge Intervals**
@@ -34,4 +34,4 @@
 - **Subsets**
 - **Top k elements**
 - **K-Way Merge**
-- **[[Misc#^topsort|Topological Sort]]**
+- **[[Algorithms/Misc#^topsort|Topological Sort]]**
