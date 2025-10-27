@@ -44,6 +44,12 @@
 
 Производительность обычно ниже из-за объёма логируемых данных, особенно при большом количестве модифицирующих запросов.
 
+**Mixed Logging**
+При `binlog-format = MIXED` MySQL по-умолчанию использует `STATEMENT`, но в следующих случаях будет использован `ROW`:
+- недетерминированные запросы (использующие `UUID()` или `RAND()`, например)
+- транзакионная операция с таблицами, обслуживаемыми разными движками
+- небезопасные операции, такие как подзапросы во временные таблицы
+
 ### Binlog configuration properties 
   
 - `sync_binlog` - this MySQL property defines how often binlog is dumped to disk (N = each n-th transaction, or up to OS if 0), so we can set it to 0 or something else for the replica we read from and keep it 1 on master to save consistency on the same level and provide better performance at the same time.  
