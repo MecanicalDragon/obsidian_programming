@@ -18,7 +18,7 @@ In the Orchestration pattern, a single *Saga Execution Coordinator* (SEC) is res
 The Saga orchestration pattern is useful for brownfield microservice development architecture, this pattern is suitable if we already have a set of microservices and would like to implement the Saga pattern in the application. We need to define the appropriate compensating transactions to proceed with this pattern. *Camunda* and *Apache Camel* are well suitable frameworks to implement this pattern.
 
 How to provide atomicity of transaction commit and next step triggering?
-- [[Event Sourcing]]
+- [[System Design/Architecture Patterns/Event Sourcing]]
 - [[Aggregate Pattern]]
 - [[Transactional outbox]]
 - [[WAL]]

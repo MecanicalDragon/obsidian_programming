@@ -1,0 +1,5 @@
+Three design patterns above decompose applications for Greenfield, but 80% of the work you do is with brownfield applications, which are big, monolithic applications (legacy codebase). [The Strangler pattern](https://developer.ibm.com/articles/cl-strangler-application-pattern-microservices-apps-trs/https:/developer.ibm.com/articles/cl-strangler-application-pattern-microservices-apps-trs/) comes to the rescue or solution. This creates two separate applications that live side by side in the same URI space. Over time, the newly refactored application “strangles” or replaces the original application until finally, you can shut off the monolithic application. The Strangler Application steps are transform, coexist and eliminate.
+
+- **Transform** — Create a parallel new site with modern approaches.
+- **Coexist** — Leave the existing site where it is for a time. Redirect from the existing site to the new one so the functionality is implemented incrementally.
+- **Eliminate** — Remove the old functionality from the existing site.

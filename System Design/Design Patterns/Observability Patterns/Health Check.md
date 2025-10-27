@@ -1,0 +1,1 @@
+When microservice architecture has been implemented, there is a chance that a service might be up but not able to handle transactions. Each service needs to have an endpoint which can be used to check the health of the application, such as /health. This API should check the status of the host, the connection to other services/infrastructure, and any specific logic.

@@ -13,7 +13,7 @@ Some entities can have a large number of events. In order to optimize loading, a
 
 **Drawbacks**
 - It is a different and unfamiliar style of programming and so there is a learning curve.
-- The event store is difficult to query since it requires typical queries to reconstruct the state of the business entities. That is likely to be complex and inefficient. As a result, the application must use [[CQRS]] to implement queries. This in turn means that applications must handle eventually consistent data.
+- The event store is difficult to query since it requires typical queries to reconstruct the state of the business entities. That is likely to be complex and inefficient. As a result, the application must use [[System Design/Architecture Patterns/CQRS]] to implement queries. This in turn means that applications must handle eventually consistent data.
 
 - [more here](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
 - [and here](https://microservices.io/patterns/data/event-sourcing.html)

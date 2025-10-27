@@ -1,0 +1,5 @@
+A service generally calls other services to retrieve data, and there is the chance that the downstream service may be down. There are two problems with this: requests will keep going to the down service, exhausting network resources and slowing performance; experience is bad and unpredictable.
+
+The consumer should invoke a remote service via a proxy that behaves in a similar fashion to an electrical [circuit breaker](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker). When the number of consecutive failures crosses a threshold, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the remote service will fail immediately. After the timeout expires the circuit breaker allows a limited number of test requests to pass through. If those requests succeed, the circuit breaker resumes normal operation. Otherwise, if there is a failure, the timeout period begins again. This pattern is suited to prevent an application from trying to invoke a remote service or access a shared resource if this operation is highly likely to fail.
+
+![[design_patterns_6.png]]

@@ -1,0 +1,1 @@
+API gateway just exposes Microservices in a single entrance point. This one allows applications to segregate additional features such as security and categorize APIs from the main service, for example, distinct Mobile API, Browser API and Public API, which implements the API for third-party developers.
