@@ -34,7 +34,13 @@
 `tar -cvf <TAR> <FILE>` - add *FILE* to *TAR* archive
 `tar -xvf <TAR> -C <DIR>` - extract *TAR* archive to the directory *DIR*
 ## Utilities
-`sh` - execute shell script`echo` - print something
+`sh` - execute shell script
+`sh -c` - read the following string, execute it as a child process, then stop.
+- `$1` - the command itself
+- `$2` - script or process name, becomes `$0` (can be seen in `ps aux`)
+- `$3...` - become arguments to the command (`$1...`)
+`exec` - system call that replaces the calling process (terminal, for ex.) with another process from the arguments saving the same `PID`
+`echo` - print something
 `echo -n` - print something without new line in the end
 `echo "hello" > file` - replace file content with "hello"
 `echo "hello" >> file` - add "hello" to the end of the file content
