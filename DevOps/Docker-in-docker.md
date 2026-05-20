@@ -5,21 +5,11 @@
 - **Building and pushing Docker images** inside a container.
 - **Testing containerized applications** without affecting the host Docker daemon.
 
-Normally, Docker **runs on the host machine** and manages containers.  
-With **Docker-in-Docker**, a container **acts as a separate Docker host**.
+Normally, Docker runs a daemon that manages containers on the host machine. With **Docker-in-Docker**, a container acts as a separate Docker host with its own daemon withinTo work this container need special permissions to the real host kernel These permissions are granted by the flag `--privileged` that disables all security mechanisms like cgroups, AppArmor, SECCOMP.
 
 `docker run --privileged -d --name docker-dind docker:dind`
 
-This starts a container **running a full Docker daemon** inside.
-Now you can run `docker build`, `docker run`, and `docker push` inside the container.
+This starts a container with a full Docker daemon running inside. This container can run `docker build`, `docker run`, and `docker push` inside the container.
 
-Instead of running a **nested** Docker daemon, you can use the **host's Docker daemon** by mounting `/var/run/docker.sock`
+Now this approach is considered obsolete because of security issues. The industry nowadays uses [[Docker-out-of-Docker]] instead.
 
-`docker run -v /var/run/docker.sock:/var/run/docker.sock docker`
-
-**Pros of this approach:**
-- **Less overhead** (no need for a separate Docker daemon).
-- **Faster builds** (since it reuses the host’s Docker cache).
-
-**Cons:**
-- **Less isolation** (Docker commands affect the host system).
