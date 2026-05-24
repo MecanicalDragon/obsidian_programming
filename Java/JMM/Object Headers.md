@@ -56,9 +56,9 @@ Since in this state only one thread tries to possess the object, this pointer po
 - That’s enough for the thread to know if it’s the one who holds the lock.
 ## Heavyweight Locked (lock = 10)
 
-If the time of race condition is significant, lightweight lock is replaced with heavyweight lock that uses an object monitor under the hood. **Object monitor** is a real object in the heap that holds the mark word of the master object and two sets of waiting threads.
+If the time of race condition is significant, lightweight lock is replaced with heavyweight lock that uses an [[Object Monitor]] under the hood.
 
-When multiple threads access synchronized code at the same time, first one assigns itself to the owner variable in object monitor, the others park in the *entrySet* of the monitor. If the thread calls the `wait()/sleep()` method or finishes execution of the critical section, it releases the lock (sets owner variable back to null), so that other threads can unpark and capture the lock. If the thread calls the `wait()/sleep()` method in the critical section, it parks to the *waitSet* of the monitor and waits there for some other thread calls `notify()` or `notifyAll()`. After that, one or all threads in the *waitSet* will be transferred to the *entrySet* and will compete for lock in common order. Since only the heavyweight monitor object has *waitSet* and *entrySet*, calling `wait()` method automatically turns other locks to heavyweight.
+Since only the heavyweight monitor object has *waitSet* and *entrySet*, calling `wait()` method automatically turns other locks to heavyweight.
 
 **ptr_to_heavyweight_monitor** – reference to the object monitor.
 ## Marked for GC (lock = 11)
