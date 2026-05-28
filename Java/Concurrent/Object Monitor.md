@@ -1,6 +1,7 @@
 **Object monitor** is a real object in the heap that holds the [[Object Headers|mark word]] of the master object (*displaced header*), owner thread variable, and two sets of waiting threads:
 - *entrySet* - a set of threads competing for the lock.
 - *waitSet* - a set of threads called `wait()` in the critical section.
+Master object is an object denoted in the `sunchronized(lock)` section.
 
 When multiple threads access synchronized code at the same time, first one assigns itself to the *owner variable* in object monitor, the others park in the *entrySet* of the monitor. If the thread calls the `wait()` method or finishes execution of the critical section, it releases the lock (sets owner variable back to null), so that other threads in the entrySet could unpark and capture the lock. If the thread calls the `wait()` method in the critical section, it parks to the *waitSet* of the monitor and waits there for some other thread calls `notify()` or `notifyAll()`. Then the thread (or all threads) in the *waitSet* are transferred to the *entrySet* and compete for the lock in common order, but acquiring it they proceed from the last executed instruction in the synchronized section, not from the beginning of it.
 
@@ -15,7 +16,10 @@ synchronized (lock) {
 Presence of these 2 sets in the object monitor is an architecture mistake: object monitor combines 2 different abstractions:
 - **mutual exclusion** (monitor ownership, *entrySet*)
 - **condition synchronization** (wait/notify, *waitSet*)
-These are two different concurrency tasks. Later they will be segregated in interfaces [[Locks|Lock]] and `Condition`: `Condition c = lock.newCondition();`
+These are two different concurrency objectives. Later they will be segregated in interfaces [[Locks|Lock]] and `Condition` (`lock.newCondition()`) that inherited all these awaiting related methods:
+- `wait` -> `await`
+- `notify` -> `signal`
+- `notifyAll` -> `signalAll`
 
 - `wait()` can be called only within the critical section, or `IllegalMonitorStateException` will be thrown.
 - Calling `sleep()` in the critical section doesn't release the lock.

@@ -63,7 +63,7 @@ Since only the heavyweight monitor object has *waitSet* and *entrySet*, calling 
 **ptr_to_heavyweight_monitor** – reference to the object monitor.
 ## Marked for GC (lock = 11)
 
-Nothing to describe here.
+Nothing to expound here.
 
 ## Locks Summary
 
