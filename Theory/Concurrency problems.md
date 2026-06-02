@@ -1,4 +1,4 @@
-**DeadLock** is a situation when 2 or more threads are waiting for each other and the waiting never ends. This can happen if T1 holds a resource that is needed for T2 and requires a resource holded by T2. There are 2 possible solutions to avoid this situation:
+**DeadLock** is a situation when 2 or more threads are waiting for each other and the waiting never ends. This can happen if T1 holds a resource that is needed for T2 and at the same time requires a resource held by T2. There are 2 possible solutions to avoid this situation:
 - acquire resources in the strict predefined order, release it in the reverse order. But this could be very inefficient.
 - provide a resource dealer that will track resource availability and permit resource acquisition by threads. But this could be very complex.
 

@@ -1,11 +1,13 @@
-**Product type** - type that contains multiple data at the same time:
+**Product type** - a type that contains multiple data at the same time:
 - Tuples
 - Records
 - OOP Objects
-**Sum type** / **discriminated union** / **ADT (algebraic data type)** - type that can be one of several values:
+
+**Sum type** / **discriminated union** / **ADT (algebraic data type)** - a type that can be one of several values:
 - Algebraic Data Type `{ name: string } | { age: number }` (can be either name or age)
 - Enum
 - Sealed classes in Kotlin or Java
+
 **Intersection type** - `{ name: string } & { age: number }` (must contain both name and age)
 **Function type** - `() => T`
 **Unit type** - type that is able to possess a single value (`Unit` in Kotlin)
