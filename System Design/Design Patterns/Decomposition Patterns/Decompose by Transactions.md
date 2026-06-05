@@ -1,5 +1,5 @@
 **This one is also called [[2-Phase Commit|Two-Phase Commit Pattern]].**
-You can decompose services over the transactions. Then there will be multiple transactions in the system. One of the important participants in a distributed transaction is [transaction coordinator](https://www.baeldung.com/transactions-across-microservices).
+You can decompose services by the transactions; then there will be multiple transactions in the system. One of the important participants in a distributed transaction is [transaction coordinator](https://www.baeldung.com/transactions-across-microservices).
 
 The distributed transaction consists of two steps:
 - **Prepare phase** — during this phase, all participants of the transaction prepare for commit and notify the coordinator that they are ready to complete the transaction

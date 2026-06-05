@@ -27,4 +27,4 @@ Once you determine that you need a new version of your API, you need to decide h
 
 No matter which option you choose, API versions should only include the major number. Minor numbers should not be required (e.g. `/v1/customers`, not `/v1.1/customers`).
 
-Also: see [deprecation header](https://tools.ietf.org/id/draft-dalal-deprecation-header-01.html)
+Also: see [deprecation header](https://zuplo.com/learning-center/http-deprecation-header)
