@@ -5,7 +5,7 @@
 
 In practice, cyclomatic complexity shows the number of the unique paths throw the code and can be calculated simply starting with counter = 1 and increasing this counter for every branching point (`if`, `while`, `for`, `catch`, `case`).
 
-The main purpose of the cyclomatic complexity is testability. CC literally says: "to achieve 100% test code coverage you need exactly X test cases". Approximate normal value: 10-15.
+The main purpose of the cyclomatic complexity is [[Test Types#^unit|testability]]. CC literally says: "to achieve 100% test code coverage you need exactly X test cases". Approximate normal value: 10-15.
 
 ### Cognitive Complexity
 **Cognitive Complexity** was introduced by [SonarSource](https://www.sonarsource.com/) in 2017. It computes how many mental efforts of a human are required to keep the code in mind.
