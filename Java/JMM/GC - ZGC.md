@@ -34,3 +34,6 @@ In the relocation phase we haven’t updated most of the references to the reloc
 4. Now the object was surely relocated - either by ZGC in the previous step, or the load barrier during an earlier hit of this object. We update the initial reference to the new location of the object (either with the address from the previous step or by looking it up in the forwarding table), set the *remap bit* to 1 and return the reference.
 
 And that's it, since every time we load a reference ZGC triggers the load barrier, and we can be sure that each time we try to access an object we get the most recent reference to it. This approach decreases application performance, especially the first time we access a relocated object. But this is a price we have to pay if we want short pause times.
+
+---
+ZGC is ideal for the websocket-oriented service because its pauses are less than 1 ms. But it consumes more CPU.
